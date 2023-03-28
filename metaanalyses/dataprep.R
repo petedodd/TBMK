@@ -394,33 +394,41 @@ fwrite(smy,file=gh('{dd}smy.csv'))
 ## from: https://github.com/petedodd/4PM/blob/master/tables/countries_HIVpmFALSE_privFALSE.csv
 Kids <- fread(gh('{dd}/other/countries_HIVpmFALSE_privFALSE.csv'))
 
-## WHO estimates/data
-## from: https://extranet.who.int/tme/generateCSV.asp?ds=notifications
-Ndz <- fread(gh('{dd}/other/TB_notifications_2023-03-28.csv'))
-## "newrel_hivtest_014"    
-## [175] "newrel_hivpos_014"
-Ndz[!is.na(newrel_hivpos_014),.(iso3,year,newrel_hivtest_014,newrel_hivpos_014)]
-## TODO - better way?
-
 ## from: https://extranet.who.int/tme/generateCSV.asp?ds=estimates
 Adz <- fread(gh('{dd}/other/TB_burden_countries_2023-03-28.csv'))
 
 Adzr <- Adz[year==2015 & iso3 %in% Kids$iso3,.(year,iso3,e_tbhiv_prct)]
 
 CF <- merge(Adzr,Kids,by='iso3')
-
-
 md <- lm(data = CF[,.(kids=HIVinTB/1e3,all=e_tbhiv_prct/100)],all ~ kids+0)
+txt <- round(coef(md),3)
+CF[,hiva:=e_tbhiv_prct/100]
+CF[,hivk:=HIVinTB/1e3]
 
-ggplot(CF,aes(x=e_tbhiv_prct/100,y=HIVinTB/1e3,label=iso3))+
-  geom_smooth(method='lm',formula = 'y~x+0')+
+GP <- ggplot(CF[,.(iso3,hivk,hiva)],
+             aes(x=hiva,y=hivk,label=iso3))+
+  geom_smooth(method='lm',formula = y~0+x)+
   geom_point()+
   ggrepel::geom_text_repel()+
-  scale_x_continuous(label = percent)+xlab('all')+
-  scale_y_continuous(label = percent)+ylab('child')+
-  annotate(geom='text',label=glue('slope = {round(coef(md),3)}'),col='blue',x=0.3,y=0.3,size=7)+
+  scale_x_continuous(label = percent)+xlab('HIV in TB (all ages)')+
+  scale_y_continuous(label = percent)+ylab('HIV in TB (0-14 years)')+
+  annotate(geom='text',label=glue('slope = {txt}'),col='blue',x=0.3,y=0.3,size=7)+
   ggtitle('2015: Child estimates from mortality paper vs WHO all TB estimates')
 
-ggsave(gh('{xd}KidHIV.png'),w=7,h=7)
+ggsave(GP,file=gh('{xd}KidHIV.png'),w=7,h=7)
+
+confint(md) #1.6,1.9
+-1e2*diff(rev(confint(md)))/txt #18%
 
 
+tmp <- Adz[year>2015,.(iso3,year,e_tbhiv_prct, e_tbhiv_prct_lo, e_tbhiv_prct_hi)]
+tmp[!is.na(e_tbhiv_prct),summary(-1e2*(e_tbhiv_prct_lo-e_tbhiv_prct_hi)/e_tbhiv_prct)] #84% >> regression
+
+## NOTE neglect uncertainty from regression compared to HIV estimate
+fac <- 1/txt
+hivintb <- tmp[,.(iso3,year,
+                  h.mid=fac*e_tbhiv_prct/1e2,
+                  h.lo=fac*e_tbhiv_prct_lo/1e2,
+                  h.hi=fac*e_tbhiv_prct_hi/1e2)]
+
+save(hivintb,file=gh('{dd}hivintb.Rdata'))
