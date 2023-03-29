@@ -13,7 +13,6 @@ dd <- 'metaanalyses/data/' #data directory
 td <- 'metaanalyses/data/tmp/' #tmp data directory
 xd <- 'metaanalyses/plots/' #export/plot directory
 
-
 ## add CIs
 ## helper functions
 getCI1 <- function(x) binom.test(x[1],x[2],p=.025)$conf.int #k,N
@@ -346,13 +345,13 @@ fwrite(BS,file=gh('{xd}BS.csv'))
 
 ## ====================== HIV ======================
 ## BRA, ECDC?, ZAF
-bra <- fread(here('BRA/BRA.csv'))
-zaf <- fread(here('ZAF/ZAF.csv'))
-eu <- fread(here('ECDC/TUBE_Case.csv'))
+bra <- fread(gh('{dd}BRA/BRA.csv'))
+zaf <- fread(gh('{dd}ZAF/ZAF.csv'))
+eu <- fread(gh('{dd}ECDC/TUBE_Case.csv'))
 
 eu[,table(HIVStatus)] #68 positive NOTE don't use
 bra[,sum(TB),by=hiv]  #1984
-zaf[,sum(TB),by=hiv]
+zaf[,sum(TB),by=hiv]  #63693
 
 akey <- data.table(age=c(acts[1],rep(acts[2],4),rep(acts[3],5),rep(acts[4],5)),
                    agey=0:14)
@@ -371,9 +370,8 @@ HD$hiv <- factor(HD$hiv,levels=c('HIV-','HIV+'),ordered=TRUE)
 
 summary(HD) #check
 
-save(HD,file=here('plots/HD.Rdata'))
+save(HD,file=gh('{td}HD.Rdata'))
 
-load(file=here('plots/HD.Rdata'))
 
 GP <- ggplot(HD,aes(age,TBM/TB,size=TB,col=hiv))+
   geom_point(shape=1)+
@@ -381,8 +379,7 @@ GP <- ggplot(HD,aes(age,TBM/TB,size=TB,col=hiv))+
   scale_y_continuous(label=percent)+
   theme_light()+
   xlab('Age (years)')+ylab('TBM in TB')
-
-ggsave(GP,file=here('plots/png/hiv_p_raw.png'),w=10,h=6)
+GP
 
 HDW <- dcast(HD,iso3+year+age~hiv,value.var = c('TB','TBM'))
 HDW[,RR:= (`TBM_HIV+`/`TB_HIV+`) / (`TBM_HIV-`/`TB_HIV-`)]
@@ -395,19 +392,39 @@ GP <- ggplot(HDW,aes(age,RR))+
   theme_light()+
   geom_hline(yintercept = 1,col=2)+
   xlab('Age (years)')+ylab('RR for TBM given HIV')
+GP
 
-ggsave(GP,file=here('plots/png/hiv_p_rawRR.png'),w=10,h=6)
+ggsave(GP,file=gh('{xd}hiv_p_rawRR.png'),w=10,h=6)
 
 
-## means?
+## means
 write.csv(HDW[,(sum(`TBM_HIV+`)/sum(`TB_HIV+`)) / (sum(`TBM_HIV-`)/sum(`TB_HIV-`)),by=age],
-          file=here('plots/HIV_RR_byage.csv'))
+          file=gh('{td}HIV_RR_byage.csv'))
 HDW[,(sum(`TBM_HIV+`)/sum(`TB_HIV+`)) / (sum(`TBM_HIV-`)/sum(`TB_HIV-`))] #1.18
 
 
+## analyse:
+## NOTE just use ZAF, MA over years (aggregate by age), logit scale
+
+HOR <- HDW[iso3=='ZAF',.(TBMp=sum(`TBM_HIV+`),TBMn=sum(`TBM_HIV-`),
+                         TBp=sum(`TB_HIV+`),TBn=sum(`TB_HIV-`)),by=year]
+
+## compute odds ratios 2 ways
+res <- rma(measure="OR", ai=TBMp, n1i=TBp, ci=TBMn, n2i=TBn, data=HOR, drop00=TRUE)
+print(res, digits=3)
+
+## ## https://www.metafor-project.org/doku.php/analyses:stijnen2010#hypergeometric-normal_model_for_the_meta-analysis_of_odds_ratios
+## res <- rma.glmm(measure="OR", ai=TBMp, n1i=TBp, ci=TBMn, n2i=TBn, data=HOR, model="CM.EL") #
+## print(res, digits=3) #similar, use simpler
+
+HIViOR <- as.data.table(predict(res, transf=exp))
+
+save(HIViOR,file=gh('{xd}HIViOR.Rdata'))
+fwrite(HIViOR,file=gh('{xd}HIViOR.csv'))
+
 ## ====================== DEATHS ====================
-Zm <- fread(here('ZAF/cases.csv'))
-Zd <- fread(here('ZAF/deaths.csv'))
+Zm <- fread(gh('{dd}ZAF/cases.csv'))
+Zd <- fread(gh('{dd}ZAF/deaths.csv'))
 
 ## --- HIV+ve first
 ZD <- merge(Zd[hiv2!='HIV unknown',.(year,age,sex,hiv=hiv2,TBMdeaths)],
@@ -431,9 +448,7 @@ GP <- ggplot(ZD,aes(age,TBMdeaths/TBM,size=TBM,col=hiv))+
   scale_y_continuous(label=percent)+
   theme_light()+
   xlab('Age (years)')+ylab('TBM deaths in notified TBM')
-
-ggsave(GP,file=here('plots/png/hiv_d_raw.png'),w=6,h=6)
-
+GP
 
 ZDW <- dcast(ZD,iso3+year+age~hiv,value.var = c('TBMdeaths','TBM'))
 ZDW[,RR:= (`TBMdeaths_HIV+`/`TBM_HIV+`) / (`TBMdeaths_HIV-`/`TBM_HIV-`)]
@@ -447,13 +462,31 @@ GP <- ggplot(ZDW[is.finite(RR)],aes(age,RR))+
   theme_light()+
   geom_hline(yintercept = 1,col=2)+
   xlab('Age (years)')+ylab('RR for TBM given HIV')
+GP
 
-ggsave(GP,file=here('plots/png/hiv_d_rawRR.png'),w=6,h=6)
+ggsave(GP,file=gh('{xd}hiv_d_rawRR.png'),w=6,h=6)
 
 ## means?
 write.csv(ZDW[,(sum(`TBMdeaths_HIV+`)/sum(`TBM_HIV+`)) / (sum(`TBMdeaths_HIV-`)/sum(`TBM_HIV-`)),by=age],
-          file=here('plots/HIVd_RR_byage.csv'))
+          file=gh('{td}HIVd_RR_byage.csv'))
 ZDW[,(sum(`TBMdeaths_HIV+`)/sum(`TBM_HIV+`)) / (sum(`TBMdeaths_HIV-`)/sum(`TBM_HIV-`))] #1.93
+
+
+## analyse:
+## NOTE just use ZAF, MA over years (aggregate by age), logit scale
+## as per deaths
+
+ZOR <- ZDW[iso3=='ZAF',.(TBMp=sum(`TBMdeaths_HIV+`),TBMn=sum(`TBMdeaths_HIV-`),
+                         TBp=sum(`TBM_HIV+`),TBn=sum(`TBM_HIV-`)),by=year]
+
+## compute odds ratios 2 ways
+res <- rma(measure="OR", ai=TBMp, n1i=TBp, ci=TBMn, n2i=TBn, data=ZOR, drop00=TRUE)
+print(res, digits=3)
+
+HIVdOR <- as.data.table(predict(res, transf=exp))
+
+save(HIVdOR,file=gh('{xd}HIVdOR.Rdata'))
+fwrite(HIVdOR,file=gh('{xd}HIVdOR.csv'))
 
 
 ## ---- HIV-ve
@@ -465,7 +498,6 @@ Zbf <- merge(Zd[,.(year,age,sex,hiv2,TBMdeaths)],
 GP <- ggplot(Zbf,aes(age,TBMdeaths/TBM,col=sex,size=TBM))+
   geom_point(shape=1)+facet_wrap(~hiv2)+theme_light()
 GP
-ggsave(GP,file=here('plots/png/deathsZAFraw.png'),w=10,h=6)
 
 ## aggregate
 acts <- c('<1','1-4','5-9','10-14')
@@ -484,13 +516,13 @@ GP <- ggplot(Zb,aes(acat,TBMdeaths/TBM,size=TBM))+
   geom_point(shape=1)+facet_wrap(~hiv2)+theme_light()
 GP
 
-ggsave(GP,file=here('plots/png/deathsZAFaggr.png'),w=10,h=6)
+ggsave(GP,file=gh('{xd}deathsZAFaggr.png'),w=10,h=6)
 
 GP <- ggplot(Zb[hiv2!='HIV unknown'],aes(acat,TBMdeaths/TBM,size=TBM))+
   geom_point(shape=1)+facet_wrap(~hiv2)+theme_light()
 GP
 
-ggsave(GP,file=here('plots/png/deathsZAFaggr_noUnk.png'),w=10,h=6)
+ggsave(GP,file=gh('{xd}deathsZAFaggr_noUnk.png'),w=10,h=6)
 
 ## meta-analyses
 F <- list()
@@ -516,9 +548,7 @@ CFR[,c('acat','hiv'):=tstrsplit(qty,',')]
 CFR[,qty:=NULL]
 CFR$acat <- factor(CFR$acat,levels=acts,ordered = TRUE)
 
-save(CFR,file=here('CFR.Rdata'))
-
-load(file=here('CFR.Rdata'))
+save(CFR,file=gh('{td}CFR.Rdata'))
 
 
 CFR[,c('TBM','TBMdeaths'):=1.0]
@@ -537,30 +567,16 @@ GP <- ggplot(Zb[hiv2!='HIV unknown'],aes(acat,TBMdeaths/TBM,size=TBM))+
 
 GP
 
-ggsave(GP,file=here('plots/png/deathsZAFaggrMA_noUnk.png'),w=10,h=6)
+ggsave(GP,file=gh('{xd}deathsZAFaggrMA_noUnk.png'),w=10,h=6)
 
-
-ggplot(M,aes(x=acat,y=lgte,ymin=lgte-2*lgt.se,ymax=lgte+2*lgt.se,
-             col=iso3,shape=sex))+
-  scale_color_colorblind()+
-  theme_classic() + ggpubr::grids()+
-  xlab('Age category')+ylab('Logit RE MA estimate over years')
-
-ggsave(here('plots/MAstep1.pdf'),w=6,h=5)
-
-
-
-
-
-## Silvia:
+## NOTE use age pattern to match with Silvia review
 silv <- c(19.3,14,26.1)
 diff(silv[-1])/silv[1]/3.92
 
-
-## new version - use the overall raw CFR for all ages as reference
+## use the overall raw CFR for all ages as reference
 ## 69/1329
 
-## Use these to compute ORs?
+## Use these to compute ORs:
 CFR[,lgt.se/lgte]
 tmp <- CFR[hiv=='HIV-']
 tmp[,lgOR:=lgte-transf.logit(69/1329)]
@@ -572,24 +588,5 @@ tmp[,OR.hi:=exp(lgOR+1.96*lgOR.sd)]
 
 cfrOR <- tmp[,.(acat,lgOR,lgOR.sd,OR,OR.lo,OR.hi)]
 
-save(cfrOR,file = here('cfrOR.Rdata'))
-fwrite(cfrOR,file = here('cfrOR.csv'))
-
-
-
-## ## Use these to compute ORs?
-## CFR[,lgt.se/lgte]
-## tmp <- CFR[hiv=='HIV-']
-## rf <- tmp[acat=='10-14'] #oldies
-## tmp[,lgOR:=lgte-rf$lgte]
-## tmp[acat=='10-14',lgt.se:=0]
-## tmp[,lgOR.sd:=sqrt(rf$lgt.se^2+lgt.se^2)]
-## tmp[,OR:=exp(lgOR)]
-## tmp[,OR.lo:=exp(lgOR-1.96*lgOR.sd)]
-## tmp[,OR.hi:=exp(lgOR+1.96*lgOR.sd)]
-## tmp[acat=='10-14',c('lgOR.sd','OR.lo','OR.hi'):=.(0,1,1)]
-
-## cfrOR <- tmp[,.(acat,lgOR,lgOR.sd,OR,OR.lo,OR.hi)]
-
-## save(cfrOR,file = here('cfrOR.Rdata'))
-## fwrite(cfrOR,file = here('cfrOR.csv'))
+save(cfrOR,file = gh('{xd}cfrOR.Rdata'))
+fwrite(cfrOR,file = gh('{xd}cfrOR.csv'))
