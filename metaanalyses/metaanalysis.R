@@ -590,3 +590,97 @@ cfrOR <- tmp[,.(acat,lgOR,lgOR.sd,OR,OR.lo,OR.hi)]
 
 save(cfrOR,file = gh('{xd}cfrOR.Rdata'))
 fwrite(cfrOR,file = gh('{xd}cfrOR.csv'))
+
+
+## ============ Age splits ===============
+DR0 <- D[,.(TB=sum(TB)),by=.(iso3,year,acat)]
+DR1 <- DR0[acat %in% c('<1','1-4')]
+DR2 <- DR0[!acat %in% c('<1','1-4')]
+
+DR1[,TBtot:=sum(TB),by=.(iso3,year)]
+DR2[,TBtot:=sum(TB),by=.(iso3,year)]
+DR1 <- DR1[acat=='<1']
+DR2 <- DR2[acat=='5-9']
+DR <- rbind(DR1,DR2)
+
+
+acts <- unique(DR$acat)
+cnz <- unique(DR$iso3)
+AS <- list()
+for(cn in cnz){
+  DL <- DR[iso3==cn]
+  for(a in acts){
+    ## print(c(cn,sx,a))
+    tmp <- DL[acat==a]
+    md <- rma.glmm(data=tmp,measure="PLO",xi=TB,ni=TBtot)
+    AS[[paste0(cn,'_',a)]] <- md
+  }
+}
+
+NAS <- list()
+for(i in 1:length(AS)){
+  NAS[[i]] <- list(qty=names(AS)[i],
+                   lgte=coef(AS[[i]]),
+                   lgt.se=AS[[i]]$se,
+                   tau2=AS[[i]]$tau2)
+}
+NAS <- rbindlist(NAS)
+NAS[,c('iso3','acat'):=tstrsplit(qty,'_')]
+NAS[,qty:=NULL]
+
+save(NAS,file=gh('{td}NAS.Rdata'))
+
+
+
+acts <- NAS[,unique(acat)]
+NAS$acat <- factor(NAS$acat,levels=acts,ordered = TRUE)
+
+ggplot(NAS,aes(x=acat,y=lgte,ymin=lgte-2*lgt.se,ymax=lgte+2*lgt.se,
+               col=iso3))+
+  geom_point(position=position_dodge(width=0.5)) +
+  geom_pointrange(position=position_dodge(width=0.5))+
+  scale_color_colorblind()+
+  theme_classic() + ggpubr::grids()+
+  xlab('Age category')+ylab('Logit RE MA estimate over years')
+
+  ggsave(here('plots/asMAstep1.pdf'),w=6,h=5)
+  ggsave(here('plots/png/asMAstep1.png'),w=6,h=5)
+
+
+
+## meta-analysis
+ma <- rma(data=NAS,yi=lgte,sei=lgt.se,mods = ~acat-1)
+
+## prediction
+AP <- as.data.table(predict(ma))
+AP[,acat:=NAS$acat]
+AP <- unique(AP)
+AP$acat <- factor(AP$acat,levels=c('<1','1-4','5-9','10-14'),ordered = TRUE)
+AP[,iso3:=NA]
+
+## plot
+psn <- position_dodge(width = 0.3)
+GP <- ggplot(NAS,aes(col=iso3))+
+  geom_errorbar(aes(acat,ymin=lgte-lgt.se*1.96,ymax=lgte+lgt.se*1.96),position=psn,width=0)+
+  geom_point(aes(acat,lgte),position=psn,size=2)+
+  geom_errorbar(data=AP,aes(acat,ymin=ci.lb,ymax=ci.ub),
+                alpha=0.65,col=2,size=4,width=0)+
+  geom_point(data=AP,aes(acat,pred),col=2,shape=5,size=4)+
+  xlab('Age category')+ylab('Proportion of TB that is TBM (logit scale)')+
+  scale_y_continuous()+
+  theme_bw()
+GP
+
+
+ggsave(gh('{xd}agesplit_MAwP.png'),w=6,h=5)
+
+AP[,c('prop','prop.lo','prop.hi','prop.lo2','prop.hi2'):=
+      .(ilogit(pred),
+        ilogit(ci.lb),ilogit(ci.ub),
+        ilogit(pi.lb),ilogit(pi.ub))
+   ]
+
+AP
+
+save(AP,file=gh('{xd}AP.Rdata'))
+fwrite(AP,file=gh('{xd}AP.csv'))
