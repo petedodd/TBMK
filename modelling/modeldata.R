@@ -349,6 +349,25 @@ sdata$seqB <- rep(tmp$a,4)
 sdata$notif_dataW <- cbind(sdata$notif_data[,c(1,1)],sdata$notif_data[,c(2,2)])
 
 
+## -- HIV ORs
+
+## incidence
+HIViOR[,S:=(pi.ub-pi.lb)/3.92]
+mn <- HIViOR[,log(pred/sqrt(1+S^2/pred^2))]
+sg <- HIViOR[,log(1+S^2/pred^2)]
+## summary(rlnorm(1e4,mn,sg)) #check
+sdata$mu_hivi <- mn
+sdata$sig_hivi <- sg
+
+## mortality
+HIVdOR[,S:=(pi.ub-pi.lb)/3.92]
+mn <- HIVdOR[,log(pred/sqrt(1+S^2/pred^2))]
+sg <- HIVdOR[,log(1+S^2/pred^2)]
+## summary(rlnorm(1e4,mn,sg)) #check
+sdata$mu_hivd <- mn
+sdata$sig_hivd <- sg
+
+
 save(sdata,file=gh('{dd}sdata.Rdata'))
 
 ## TODO
