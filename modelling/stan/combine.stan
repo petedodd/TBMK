@@ -64,7 +64,7 @@ transformed parameters{
   propAgeLong[4] = 1-propAge[2];
   propAmat =  rep_matrix(propAgeLong',N);
   TBMnotes = propAmat .* propTBMmat .* notif_dataW;
-  tbivec = foi .* (1-(1-BCGprot) * 1e-2 .* BCG_coverage);//NOTE
+  tbivec = foi .* (1-(1-BCGprot) * 1e-2 * BCG_coverage);//NOTE
   tbimat = rep_matrix(tbivec,4);
   progmat = rep_matrix(prog',N);
   TBMI = tbimat .* progmat .* POPS;
