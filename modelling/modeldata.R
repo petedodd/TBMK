@@ -14,8 +14,6 @@ xd <- 'modelling/plots/'
 md <- 'metaanalyses/data/'
 mp <- 'metaanalyses/plots/'
 
-## wdr <- '~/Documents/gtb2021/'
-## there <- function(x) glue(wdr) + x
 ssum <- function(x) sqrt(sum(x^2)) ## summaries
 gh <- function(x) glue(here(x))
 S <- function(...)sum(...,na.rm=TRUE)
@@ -23,15 +21,7 @@ S <- function(...)sum(...,na.rm=TRUE)
 ## S(1,NA,3)
 
 
-
-## --- data from meta-analyses
-## proportion of TBM in notifications by age
-load(gh('{mp}BS.Rdata')) #
-BS
-
-## proportion of notifications in each age group
-load(gh('{mp}AP.Rdata')) #
-AP
+## ========== NOTE can skip to [*] if data interim data prep done
 
 ## --- WHO data
 ## notification data in children by country
@@ -131,8 +121,36 @@ POP <- POP[,.(pop=sum(val)),by=.(iso3,acat)]
 save(POP,file=gh('{dd}POP.Rdata'))
 
 
-## ============================================
+## ============================================ [*]
 ## --- join and output
+
+## --- data from meta-analyses
+## proportion of TBM in notifications by age
+load(gh('{mp}BS.Rdata')) #
+BS
+
+## proportion of notifications in each age group
+load(gh('{mp}AP.Rdata')) #
+AP
+
+## progression
+load(gh('{mp}PD.Rdata')) #
+PD
+
+## age-dependent ORs
+load(gh('{mp}cfrOR.Rdata'))
+cfrOR
+
+## HIV-related ORs
+load(gh('{mp}HIVdOR.Rdata'))
+load(gh('{mp}HIViOR.Rdata'))
+
+## HIV in TB
+load(file=gh('{md}hivintb.Rdata'))
+hivintb <- hivintb[year==2019]
+hivintb[,h.sd:=(h.hi-h.lo)/3.92]
+
+## ---outputs prepared above
 load(file=gh('{dd}TBN.Rdata'))
 load(file=gh('{dd}P.Rdata'))
 load(file=gh('{dd}POP.Rdata'))
@@ -172,6 +190,14 @@ sag <- unique(lagg)
 ## prev
 setkey(P,iso3)
 
+## HIV prev
+setkey(hivintb,iso3)
+hivintb <- hivintb[isoz,.(iso3,h.mid,h.sd)]
+hivintb[,lmn:=log(h.mid/sqrt(1+h.sd^2/h.mid^2))]
+hivintb[,lsg:=log(1+h.sd^2/h.mid^2)]
+hivintb[!is.finite(lmn),lmn:=-10]
+hivintb[!is.finite(lsg),lsg:=0.5]
+
 
 ## stan data
 sdata <- list(
@@ -181,7 +207,8 @@ sdata <- list(
   notif_data = as.matrix(TBNW[isoz][,.(notes_0_4,notes_5_14)]),
   BCG_coverage = BCG,
   POPS = as.matrix(POPW[isoz][,..sag]),
-  PREVM = P[isoz][,prev], PREVS = P[isoz][,prev.sd]
+  PREVM = P[isoz][,prev], PREVS = P[isoz][,prev.sd],
+  hiv_lmn = hivintb$lmn,hiv_lsg = hivintb$lsg
 )
 
 ## gamma: var=shape/rate^2, mean=shape/rate (sd=sqrt(shape)/rate)
@@ -214,9 +241,11 @@ sdata$sig_notes <- BS$se
 ## sdata$sig_prog <- BD$pred.sdl[1:4]
 
 ## ## just cohorts:
-## TODO
-sdata$mu_prog <- BD$prog.mnl[1:4]
-sdata$sig_prog <- BD$prog.sdl[1:4]
+plmn <- log(PD$prog.mn/sqrt(1+PD$prog.sd^2/PD$prog.mn^2))
+plsg <- log(1+PD$prog.sd^2/PD$prog.mn^2)
+## summary(rlnorm(1e4,plmn[1],plsg[1])) #check
+sdata$mu_prog <- plmn
+sdata$sig_prog <- plsg
 
 ## proportion of note in each age
 sdata$mu_age <- AP$pred
@@ -297,11 +326,8 @@ CFRtxB <- rep(bab$b,4)
 sdata$CFRtxA <- CFRtxA
 sdata$CFRtxB <- CFRtxB
 
+
 ## age-dependent ORs
-
-load(gh('{mp}cfrOR.Rdata'))
-
-cfrOR
 sdata$lgOR <- cfrOR$lgOR
 sdata$lgORsd <- cfrOR$lgOR.sd
 
@@ -314,7 +340,7 @@ sdata$lgORsd <- cfrOR$lgOR.sd
 tmp <- HEdtree::getAB(0.539,(64.9-42.6)^2/392^2)
 rtmp <- rbeta(1e4,tmp$a,tmp$b)
 summary(rtmp)
-hist(rtmp)
+## hist(rtmp)
 sdata$seqA <- rep(tmp$a,4)
 sdata$seqB <- rep(tmp$a,4)
 
@@ -326,6 +352,5 @@ sdata$notif_dataW <- cbind(sdata$notif_data[,c(1,1)],sdata$notif_data[,c(2,2)])
 save(sdata,file=gh('{dd}sdata.Rdata'))
 
 ## TODO
-## BD
-## HIV ORs x2
-## age split?
+## consider beta?
+## tidy
