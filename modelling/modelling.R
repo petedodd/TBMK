@@ -22,12 +22,16 @@ load(file=gh('{dd}sdata.Rdata'))
 
 ## compile stan model
 mdl <- stan_model(file=gh('{zd}combine.stan'))
+mdlH <- stan_model(file=gh('{zd}combineH.stan'))
 
 
 ## NOTE vectors and in [0,1]
 ## sample
 sdata$couple <- 1
 smps <- sampling(mdl, data=sdata, chains=4, iter=2000, cores=4)
+
+smps <- sampling(mdlH, data=sdata, chains=1, iter=1000, cores=1) #test
+
 
 
 ## NOTE have convergence issues with coupling off
