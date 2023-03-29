@@ -5,6 +5,13 @@ library(data.table)
 library(ggplot2)
 library(ggthemes)
 library(scales)
+library(glue)
+ilogit <- function(x)1/(1+exp(-x))
+gh <- function(x) glue(here(x))
+wd <- 'metaanalyses/'      #working directory
+dd <- 'metaanalyses/data/' #data directory
+td <- 'metaanalyses/data/tmp/' #tmp data directory
+xd <- 'metaanalyses/plots/' #export/plot directory
 
 
 ## add CIs
@@ -29,10 +36,10 @@ MLH(c(5,5,5),c(10,10,10))
 
 
 ## data
-D <- fread(here('TBMinTB2.csv'))
+D <- fread(gh('{dd}TBMinTB.csv'))
 D[,unique(hiv)]
 
-DR <- D[!hiv %in% c('HIV+','HIV+ve')]
+DR <- D[!hiv %in% c('HIV+','HIV+ve')] #drop HIV
 
 ## 2 step: countrywise age x sex
 ## then aggregate these
@@ -55,14 +62,7 @@ for(cn in cnz){
   }
 }
 
-L[[1]]
-names(L)
-
-save(L,file=here('L.Rdata'))
-
-load(file=here('L.Rdata'))
-
-
+save(L,file=gh('{td}L.Rdata'))
 
 M <- list()
 for(i in 1:length(L)){
@@ -75,9 +75,8 @@ M <- rbindlist(M)
 M[,c('iso3','sex','acat'):=tstrsplit(qty,'_')]
 M[,qty:=NULL]
 
-save(M,file=here('M.Rdata'))
+save(M,file=gh('{td}M.Rdata'))
 
-load(file=here('M.Rdata'))
 
 acts <- M[,unique(acat)]
 M$acat <- factor(M$acat,levels=acts,ordered = TRUE)
@@ -90,7 +89,7 @@ ggplot(M,aes(x=acat,y=lgte,ymin=lgte-2*lgt.se,ymax=lgte+2*lgt.se,
   theme_classic() + ggpubr::grids()+
   xlab('Age category')+ylab('Logit RE MA estimate over years')
 
-ggsave(here('plots/MAstep1.pdf'),w=6,h=5)
+ggsave(gh('{xd}MAstep1_withSex.png'),w=6,h=5)
 
 
 ## ---  as above but not including sex:
@@ -109,13 +108,7 @@ for(cn in cnz){
   }
 }
 
-L0[[1]]
-names(L0)
-
-save(L0,file=here('L0.Rdata'))
-
-load(file=here('L0.Rdata'))
-
+save(L0,file=gh('{td}L0.Rdata'))
 
 
 M0 <- list()
@@ -126,13 +119,10 @@ for(i in 1:length(L0)){
                  tau2=L0[[i]]$tau2)
 }
 M0 <- rbindlist(M0)
-
 M0[,c('iso3','acat'):=tstrsplit(qty,'_')]
 M0[,qty:=NULL]
 
-save(M0,file=here('M0.Rdata'))
-
-load(file=here('M0.Rdata'))
+save(M0,file=gh('{td}M0.Rdata'))
 
 acts <- M0[,unique(acat)]
 M0$acat <- factor(M0$acat,levels=acts,ordered = TRUE)
@@ -146,7 +136,7 @@ ggplot(M0,aes(x=acat,y=lgte,ymin=lgte-2*lgt.se,ymax=lgte+2*lgt.se,
   xlab('Age category')+ylab('Logit RE MA estimate over years')+
   theme(legend.title=element_blank())
 
-ggsave(here('plots/MAstep1nosex.pdf'),w=6,h=5)
+ggsave(gh('{xd}MAstep1_noSex.png'),w=6,h=5)
 
 
 
@@ -154,7 +144,7 @@ ggsave(here('plots/MAstep1nosex.pdf'),w=6,h=5)
 
 ## consider spline model as elsewhere
 ## spline model
-R <- fread(here('TBMinTBreviews.csv'))
+R <- fread(gh('{dd}TBMinTBreviews.csv'))
 R <- R[Setting!='Spain'] #exclude because this data already in ECDC
 tmp <- strsplit(R$acat,split='-')
 
@@ -189,13 +179,7 @@ A <- rma.glmm(measure = "PLO",
               slab=Author)
 
 summary(A)
-forest(A,transf = transf.ilogit,refline=NA)
-## 
 cz <- coef(A)
-
-## s1 <- function(x) strsplit(x,split = "_")[[1]][2]
-## s2 <- function(x) unlist(lapply(x,s1))
-## P[,Paper2:=s2(Paper)]
 
 ## predictions
 agz <- seq(from=0.25,to=15,by=0.1)
@@ -207,7 +191,7 @@ PP[,c('mid','lo','hi'):=.(exp(pred),exp(ci.lb),exp(ci.ub))]
 PP[,c('lo2','hi2'):=.(exp(pi.lb),exp(pi.ub))]
 
 
-
+## plot
 GP <- ggplot(R,aes(age.mid,mid,
                    ymin=lo,ymax=hi,
                    xmin=age.lo,xmax=age.hi,
@@ -248,7 +232,7 @@ GP <- ggplot(R,aes(age.mid,mid,
 GP
 
 
-ggsave(GP,file=here('plots/TBMinTBreviewsSpline.pdf'),w=8,h=6)
+ggsave(GP,file=gh('{xd}ReviewsMA_cts.png'),w=8,h=6)
 
 
 ## ---
@@ -267,8 +251,8 @@ MP <- cbind(MP,MM)
 MP[,c('mid','lo','hi'):=.(exp(pred),exp(ci.lb),exp(ci.ub))]
 MP[,c('lo2','hi2'):=.(exp(pi.lb),exp(pi.ub))]
 
-save(MP,file=here('MP.Rdata'))
-load(file=here('MP.Rdata'))
+save(MP,file=gh('{td}MP.Rdata'))
+
 
 
 B <- rbind(M[,.(source=paste0(iso3,": ",sex),acat,lgte,lgt.se,type='Surveillance')],
@@ -288,11 +272,7 @@ GP <- ggplot(B,aes(acat,lgte,
   theme_bw()
 GP
 
-ggsave(GP,file=here('plots/TBMinTB_CFmaAs1_sex.pdf'),w=10,h=6)
-ggsave(GP,file=here('plots/png/TBMinTB_CFmaAs1_sex.png'),w=10,h=6)
-
-
-
+ggsave(GP,file=gh('{xd}CombineMA_AgeSex.png'),w=10,h=6)
 
 
 ## no sex version
@@ -328,22 +308,41 @@ GP <- ggplot(B,aes(## acat,lgte,
   theme_bw()
 GP
 
-ggsave(GP,file=here('plots/TBMinTB_CFmaAs1_nosex.pdf'),w=10,h=6)
-ggsave(GP,file=here('plots/png/TBMinTB_CFmaAs1_nosex.png'),w=10,h=6)
+ggsave(GP,file=gh('{xd}CombineMA_Age.png'),w=10,h=6)
 
 
-ilogit <- function(x)1/(1+exp(-x))
+
+B[source=='meta-analysis',source:='Reviews']
+
+psn <- position_dodge(width = 0.3)
+GP <- ggplot(B,aes(col=source,shape=type))+
+  geom_errorbar(aes(acat,ymin=ilogit(lgte-lgt.se*1.96),
+                    ymax=ilogit(lgte+lgt.se*1.96)),
+                position=psn,width=0)+
+  geom_point(aes(acat,ilogit(lgte)),position=psn,size=2)+
+  geom_errorbar(data=BS,aes(acat,ymin=ilogit(ci.lb),ymax=ilogit(ci.ub)),
+                alpha=0.65,col=2,size=4,width=0)+
+  geom_point(data=BS,aes(acat,ilogit(pred)),col=2,shape=5,size=4)+
+  xlab('Age category (years)')+ylab('Proportion of TB that is TBM')+
+  scale_y_continuous(label=percent)+
+  theme_bw()
+GP
+
+ggsave(GP,file=gh('{xd}CombineMA_Age_percent.png'),w=10,h=6)
+
+
 
 BS[,c('prop','prop.lo','prop.hi','prop.lo2','prop.hi2'):=
-      .(ilogit(pred),ilogit(ci.lb),ilogit(ci.ub),ilogit(pi.lb),ilogit(pi.ub))
+      .(ilogit(pred),
+        ilogit(ci.lb),ilogit(ci.ub),
+        ilogit(pi.lb),ilogit(pi.ub))
    ]
 
 BS
 
-save(BS,file=here('plots/BS.Rdata'))
-fwrite(BS,file=here('plots/BS.csv'))
+save(BS,file=gh('{xd}BS.Rdata'))
+fwrite(BS,file=gh('{xd}BS.csv'))
 
-load(file=here('plots/BS.Rdata'))
 
 ## ====================== HIV ======================
 ## BRA, ECDC?, ZAF
