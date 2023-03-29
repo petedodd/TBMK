@@ -1,0 +1,15 @@
+Paper,age.lo,age.hi,"age group",infected,TBM
+BM4_Brailey,0,3,"0 - <3",512,26
+BM4_Brailey,3,14,"3 - 14",636,6
+ML1_Cam&Mil,0,5,"0 - <5",1020,35
+BM2_Wallgren,0,16,"0 - 16",453,64
+ML5_Miller,2,7,"2 - <7",61,0
+ML5_Miller,0,2,"0 - <2",38,5
+ML2_Payne,0,1,"0 - <1",229,49
+ML2_Payne,1,5,"1 - <5",211,6
+ML2_Payne,5,10,"5 - < 10",165,1
+ML2_Payne,10,15,"10 - <15",116,1
+BM7_Davies,0,1,"0-1 years",29,3
+BM7_Davies,2,5,"2-5 years",369,5
+BM7_Davies,6,10,"6-10 years",634,1
+BM7_Davies,11,15,"11-15 years",535,0
