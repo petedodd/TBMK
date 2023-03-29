@@ -1,0 +1,613 @@
+measure_id,measure_name,location_id,location_name,sex_id,sex_name,age_id,age_name,cause_id,cause_name,metric_id,metric_name,year,val,upper,lower
+5,Prevalence,79,Finland,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,8.356123985290334e-05,9.954227755488148e-05,6.95908853557518e-05
+5,Prevalence,15,Myanmar,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,0.00014618517523472068,0.00030879074679426453,5.193093381516702e-05
+5,Prevalence,15,Myanmar,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,1.3329069574323693e-05,2.8153547698734713e-05,4.734865964208684e-06
+5,Prevalence,14,Maldives,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.0006746334466886739,0.0007994333989104942,0.0005659500979166195
+5,Prevalence,57,Belarus,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.0003561718762278041,0.0004651069579743702,0.0002543503030838394
+5,Prevalence,79,Finland,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,2.7628115505221494e-06,6.985099294059414e-06,8.700850081273961e-07
+5,Prevalence,79,Finland,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,3.4735800289516693e-07,8.77853181050032e-07,1.0935410925300756e-07
+5,Prevalence,6,China,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,4.054099257225398e-05,0.00013109866412203605,7.687137914829746e-06
+5,Prevalence,6,China,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,3.6965686392400823e-06,1.1953473035555051e-05,7.009021940836496e-07
+5,Prevalence,46,Croatia,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,5.649038413829515e-07,1.5828713436076204e-06,1.3391618218646987e-07
+5,Prevalence,46,Croatia,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,1.237724839552399e-07,3.467976105762592e-07,2.934283905296831e-08
+5,Prevalence,37,Kyrgyzstan,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.0009079985409986613,0.0011962938462039452,0.0005852622183066886
+5,Prevalence,47,Czechia,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.00010461647156683537,0.000123366495715035,8.842415675862798e-05
+5,Prevalence,19,Timor-Leste,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,1.2171082631495648e-05,4.942751415555976e-05,1.2689467131498047e-06
+5,Prevalence,19,Timor-Leste,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,1.1097878359215542e-06,4.505776166754641e-06,1.1569362158374307e-07
+5,Prevalence,48,Hungary,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,1.7346879017562962e-06,5.682884966452367e-06,3.159674366159613e-07
+5,Prevalence,48,Hungary,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,3.8007329765121845e-07,1.2444892973117729e-06,6.925146991703813e-08
+5,Prevalence,90,Norway,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,5.21230464154506e-05,6.183475296084591e-05,4.408814761372402e-05
+5,Prevalence,36,Kazakhstan,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.0007281997152864745,0.0009105243190190502,0.0005696721265329932
+5,Prevalence,10,Cambodia,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.004713389751523777,0.005434862184685116,0.004089565152567424
+5,Prevalence,91,Portugal,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.00019380582499843374,0.00022543997121230708,0.0001654099681627971
+5,Prevalence,91,Portugal,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,2.7616831718711745e-06,7.2513318284370895e-06,6.387223011043978e-07
+5,Prevalence,91,Portugal,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,3.4721288584309375e-07,9.118401447833427e-07,8.036507228424119e-08
+5,Prevalence,37,Kyrgyzstan,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,0.00029553083170517946,0.0005516115537820081,0.00010531323252075078
+5,Prevalence,37,Kyrgyzstan,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,6.475301530799666e-05,0.00012085536661276979,2.3077219737546395e-05
+5,Prevalence,27,Samoa,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.0012700027282474277,0.0014625432964444657,0.0011059493115989157
+5,Prevalence,144,Jordan,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,2.8069099525613697e-06,9.735550220016265e-06,4.746069762133818e-07
+5,Prevalence,144,Jordan,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,9.907057594058761e-08,3.435502654177095e-07,1.6757283378218157e-08
+5,Prevalence,156,United Arab Emirates,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.0005280948083847596,0.0006461456041825414,0.00042662516012037006
+5,Prevalence,19,Timor-Leste,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.0025914351780900887,0.0029308538082144253,0.002275253788126406
+5,Prevalence,80,France,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,9.632339175862748e-05,0.00011321857776171235,8.230376267277715e-05
+5,Prevalence,80,France,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,1.7516795625103052e-06,3.644985609146749e-06,6.315331000898657e-07
+5,Prevalence,80,France,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,2.2023235154418753e-07,4.5814638220768656e-07,7.937783843243047e-08
+5,Prevalence,52,Romania,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.0005748753199533819,0.0006841975515794364,0.0004826539146609444
+5,Prevalence,136,Paraguay,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.0004875038430842992,0.0005759347956081996,0.00040950510941240004
+5,Prevalence,136,Paraguay,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,1.5772657454067225e-05,5.2063203748824744e-05,1.848303523777974e-06
+5,Prevalence,136,Paraguay,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,1.2456611578601575e-06,4.112712619843197e-06,1.4592246930275542e-07
+5,Prevalence,369,Nauru,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,3.2666029982689724e-07,1.4717447248513353e-06,3.3582858877898025e-08
+5,Prevalence,122,Ecuador,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,2.5055916831570782e-06,7.639379838526833e-06,4.5143324906849177e-07
+5,Prevalence,112,Grenada,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.00032257097016973285,0.0003891336095954024,0.0002672761915574235
+5,Prevalence,155,Turkey,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.0003892489856557573,0.0004572113626617084,0.00033076554372102345
+5,Prevalence,126,Costa Rica,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.00017377288202778752,0.00020403804804923164,0.00014838496411888368
+5,Prevalence,58,Estonia,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,6.342425948703389e-05,0.00010633629736988633,3.272495820612533e-05
+5,Prevalence,58,Estonia,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,1.3896843956169016e-05,2.3298630532483118e-05,7.169887655634505e-06
+5,Prevalence,93,Sweden,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,7.55446482754319e-05,9.056017302317684e-05,6.301023699715849e-05
+5,Prevalence,53,Serbia,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,1.7057634366940952e-06,4.602708610489424e-06,4.6603140323581567e-07
+5,Prevalence,53,Serbia,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,3.7374644459242997e-07,1.007978924315444e-06,1.0207762734300216e-07
+5,Prevalence,15,Myanmar,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.00245888439323524,0.002797249241906728,0.0021048702496736502
+5,Prevalence,156,United Arab Emirates,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,1.05226055115588e-05,4.194200625617637e-05,1.1102589062120574e-06
+5,Prevalence,156,United Arab Emirates,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,3.713800724006149e-07,1.479125283727932e-06,3.9185886923117167e-08
+5,Prevalence,88,Malta,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,8.258334702597709e-08,3.041403693203535e-07,1.1766912343021894e-08
+5,Prevalence,41,Uzbekistan,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,0.00023497153820442541,0.00044202863254510973,8.987520824693241e-05
+5,Prevalence,41,Uzbekistan,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,5.1484125133110854e-05,9.684413302095842e-05,1.9691879044168343e-05
+5,Prevalence,97,Argentina,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,2.8383084089201395e-06,1.0384706526066518e-05,3.819514270783093e-07
+5,Prevalence,97,Argentina,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,3.568415717048677e-07,1.3063944648132763e-06,4.8017170633831486e-08
+5,Prevalence,82,Greece,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,8.418663930508436e-05,9.89541139990693e-05,7.121761997890374e-05
+5,Prevalence,82,Greece,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,2.404507177451113e-06,7.4611839263015905e-06,4.124331440490446e-07
+5,Prevalence,82,Greece,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,3.023141740027419e-07,9.382746128027823e-07,5.1830698030613934e-08
+5,Prevalence,123,Peru,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.000843552956576183,0.0009856297863112535,0.0007122001626851782
+5,Prevalence,123,Peru,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,6.537357196961441e-05,0.00011585246436913138,3.2688321430060556e-05
+5,Prevalence,123,Peru,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,5.162771047500005e-06,9.14764196611775e-06,2.581391948109345e-06
+5,Prevalence,47,Czechia,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,2.0509045073197122e-06,4.635005252114826e-06,7.240376883491378e-07
+5,Prevalence,47,Czechia,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,4.493694305253578e-07,1.0153049301072561e-06,1.5859937849452451e-07
+5,Prevalence,41,Uzbekistan,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.0008184192412326609,0.0010779992108267446,0.0005378021686517356
+5,Prevalence,83,Iceland,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,6.07628068742061e-05,7.220910345045628e-05,5.071955315993268e-05
+5,Prevalence,83,Iceland,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,5.606352674280652e-07,2.078388226722968e-06,8.002717812955836e-08
+5,Prevalence,68,Republic of Korea,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.0003838135465590102,0.0004595456603116383,0.00031931213891692997
+5,Prevalence,68,Republic of Korea,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,5.180992704471938e-06,2.0662004766185442e-05,7.497202607094874e-07
+5,Prevalence,68,Republic of Korea,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,6.513800542250869e-07,2.598011662504955e-06,9.426981088269652e-08
+5,Prevalence,139,Algeria,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,1.9769241905031352e-07,9.047232244690004e-07,1.8186631938149937e-08
+5,Prevalence,125,Colombia,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.0003054072437694831,0.0003570454820198459,0.0002512059066717851
+5,Prevalence,48,Hungary,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.00013436609165764295,0.00015984862713332523,0.00011381917126393916
+5,Prevalence,97,Argentina,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.00020051798473205885,0.00023922639430187199,0.0001687205391629046
+5,Prevalence,127,El Salvador,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,4.3795796779093935e-06,1.6631251973925693e-05,5.452086551045472e-07
+5,Prevalence,127,El Salvador,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,3.4588146171677456e-07,1.3135071209702023e-06,4.304682436250798e-08
+5,Prevalence,57,Belarus,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,0.00021481729554954403,0.0002997341123064695,0.00014213824166378237
+5,Prevalence,57,Belarus,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,4.7067758005382456e-05,6.567921799614757e-05,3.113951358538456e-05
+5,Prevalence,84,Ireland,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,1.0284531462287066e-06,2.89938739924127e-06,2.6367240348438676e-07
+5,Prevalence,84,Ireland,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,1.293013219820432e-07,3.644642355676048e-07,3.31355847164612e-08
+5,Prevalence,50,Montenegro,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.00014897647949832095,0.00017687171963586985,0.00012604516931888495
+5,Prevalence,146,Lebanon,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.0002865039601706919,0.0003364107025433026,0.00024122852788173172
+5,Prevalence,146,Lebanon,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,5.255723015247764e-06,2.2099989447885834e-05,6.578059249578301e-07
+5,Prevalence,146,Lebanon,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,1.8549270265103827e-07,7.797006504828817e-07,2.3226841835041653e-08
+5,Prevalence,46,Croatia,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.00015765863855170292,0.00018328606257811511,0.00013471370060227558
+5,Prevalence,139,Algeria,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,5.601390609471726e-06,2.5639302395977924e-05,5.15268639861724e-07
+5,Prevalence,139,Algeria,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.00027315671979371095,0.00032168363059408836,0.00023130480320508002
+5,Prevalence,88,Malta,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,8.832700638850687e-05,0.0001057782868398775,7.36838848180846e-05
+5,Prevalence,88,Malta,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,6.568608779875763e-07,2.419134705233302e-06,9.358851691993875e-08
+5,Prevalence,215,Sao Tome and Principe,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.0014945946226946932,0.0017526660102089302,0.0012564767683141606
+5,Prevalence,141,Egypt,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.0003840728474152285,0.000453946684605167,0.0003243347964473526
+5,Prevalence,112,Grenada,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,2.3637633562340045e-06,1.1183663905891642e-05,1.984943263473454e-07
+5,Prevalence,112,Grenada,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,1.8667345328214836e-07,8.831849702429777e-07,1.5678524514359488e-08
+5,Prevalence,81,Germany,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,7.903625476657822e-05,9.352507797637075e-05,6.684712732208916e-05
+5,Prevalence,81,Germany,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,3.0278854843910206e-06,6.153650959463431e-06,1.2087213292149843e-06
+5,Prevalence,81,Germany,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,3.80688806805524e-07,7.741437641242952e-07,1.5200846961719056e-07
+5,Prevalence,148,Morocco,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.0012533228490008042,0.0014823380473892775,0.0010569138386743574
+5,Prevalence,148,Morocco,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,2.5129854564604555e-05,5.700597102860998e-05,7.395510449159603e-06
+5,Prevalence,201,Burkina Faso,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.0031217837581001178,0.003625090431346289,0.0026512817037170635
+5,Prevalence,83,Iceland,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,7.04861133129662e-08,2.614181878589517e-07,1.0061014625409615e-08
+5,Prevalence,142,Iran (Islamic Republic of),3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.00017514441074668307,0.00020512658441587973,0.00014886997537014418
+5,Prevalence,126,Costa Rica,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,3.4491383114473095e-06,1.2328514946286182e-05,4.858413839666629e-07
+5,Prevalence,126,Costa Rica,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,2.7239702851119693e-07,9.740864056963086e-07,3.8381012112890694e-08
+5,Prevalence,376,Northern Mariana Islands,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.0007588594540049572,0.0008891357799080101,0.0006448111431886372
+5,Prevalence,142,Iran (Islamic Republic of),3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,3.0510192466008596e-06,7.1880104412308805e-06,9.210571896190169e-07
+5,Prevalence,142,Iran (Islamic Republic of),3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,1.0768311737161788e-07,2.5366032506925047e-07,3.2509775031563196e-08
+5,Prevalence,84,Ireland,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,7.792122295089187e-05,9.230566203243201e-05,6.654138589344537e-05
+5,Prevalence,161,Bangladesh,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.0020077693584577725,0.002317085967363269,0.0017476273190811238
+5,Prevalence,161,Bangladesh,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,7.375297386384348e-05,0.0001857118092332562,1.733424739367613e-05
+5,Prevalence,161,Bangladesh,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,1.807677612854659e-06,4.5532440657537254e-06,4.246189302648502e-07
+5,Prevalence,61,Republic of Moldova,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.0006227084314406612,0.0008197757787979328,0.0004454313098951217
+5,Prevalence,35,Georgia,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.0007433784593433325,0.0009052430780678645,0.0006022353578298413
+5,Prevalence,60,Lithuania,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.0006568088700402781,0.000794416813224636,0.0005363229093394263
+5,Prevalence,50,Montenegro,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,1.3517917688525542e-06,4.42549733379605e-06,2.2595015854996015e-07
+5,Prevalence,50,Montenegro,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,2.9618431984897524e-07,9.69571441986929e-07,4.951043104105024e-08
+5,Prevalence,145,Kuwait,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.00026474261277379795,0.0003180644731949624,0.00022030516506767338
+5,Prevalence,202,Cameroon,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,5.672738303171422e-05,0.00017446481777520887,8.103036188308911e-06
+5,Prevalence,202,Cameroon,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,3.6598142145418496e-07,1.1254955880345775e-06,5.228557192380345e-08
+5,Prevalence,380,Palau,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.0009925590247344435,0.0011611789663654333,0.0008497602018890641
+5,Prevalence,380,Palau,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,2.9602710958458383e-06,1.263197298425181e-05,3.0254371561766573e-07
+5,Prevalence,380,Palau,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,2.699168191857396e-07,1.1517094089357247e-06,2.7594293513486103e-08
+5,Prevalence,116,Saint Lucia,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.00038097197842569395,0.00044737395444095253,0.0003220019971829373
+5,Prevalence,116,Saint Lucia,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,1.6129636940940832e-06,6.3668719145014684e-06,1.9025970309944206e-07
+5,Prevalence,116,Saint Lucia,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,1.2738480720050296e-07,5.029950547426412e-07,1.5030189019243054e-08
+5,Prevalence,145,Kuwait,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,4.218886303818857e-06,1.0856695160853691e-05,1.124116601358733e-06
+5,Prevalence,145,Kuwait,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,1.4889922423592266e-07,3.8352139039834964e-07,3.970686806295807e-08
+5,Prevalence,85,Israel,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,2.7990782645586775e-06,6.460164460923182e-06,8.973896801540914e-07
+5,Prevalence,150,Oman,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.0002269772897885106,0.0002766234453422045,0.00018387399365264636
+5,Prevalence,85,Israel,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,3.519207075778115e-07,8.125856730481125e-07,1.1280224126640293e-07
+5,Prevalence,61,Republic of Moldova,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,0.00037692422739216835,0.0005300225700844759,0.00025451479187652487
+5,Prevalence,61,Republic of Moldova,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,8.258693780033935e-05,0.00011612985932048296,5.5761415904132826e-05
+5,Prevalence,36,Kazakhstan,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,0.0001889443659780554,0.00030184754119501475,0.00010091934002909107
+5,Prevalence,36,Kazakhstan,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,4.139905666955132e-05,6.613504503749827e-05,2.210843944406616e-05
+5,Prevalence,51,Poland,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.000177704861964332,0.00020904429706667603,0.00015180396072195327
+5,Prevalence,125,Colombia,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,1.2671868566259823e-05,3.467410120778644e-05,2.0931686022005443e-06
+5,Prevalence,125,Colombia,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,1.000748527367586e-06,2.7368419766081133e-06,1.6526040997832884e-07
+5,Prevalence,62,Russian Federation,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.0006047271775385072,0.0007741932110732275,0.00045631610441979357
+5,Prevalence,51,Poland,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,1.3769152922879727e-06,3.1900359282215472e-06,5.088694701324283e-07
+5,Prevalence,51,Poland,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,3.016898058672082e-07,6.9887003931816e-07,1.1147936984905777e-07
+5,Prevalence,10,Cambodia,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,3.3450841498115296e-05,0.0001130784893898025,5.01913244379327e-06
+5,Prevalence,62,Russian Federation,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,0.00017761470864488145,0.0002749701743329716,9.433925682784602e-05
+5,Prevalence,62,Russian Federation,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,3.89166568647269e-05,6.024698680090433e-05,2.0669520458696504e-05
+5,Prevalence,131,Nicaragua,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.00036599220081137706,0.00042678619954469605,0.00031016008251384664
+5,Prevalence,45,Bulgaria,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.0002744362410228183,0.00032362896076723157,0.00023312401852327604
+5,Prevalence,58,Estonia,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.000300192802812434,0.0003701163790155884,0.0002375511869431818
+5,Prevalence,151,Qatar,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,4.219090708534603e-06,1.3587418700523506e-05,8.926590010874585e-07
+5,Prevalence,11,Indonesia,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.0020762683113052204,0.0023601960393491326,0.001826194130725556
+5,Prevalence,11,Indonesia,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,7.963493776201379e-06,3.1647543096623815e-05,9.335013861800861e-07
+5,Prevalence,11,Indonesia,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,7.261196034624589e-07,2.8852825753717815e-06,8.511897311811074e-08
+5,Prevalence,127,El Salvador,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.00023742806145107123,0.0002775169697788898,0.00020189268498458472
+5,Prevalence,52,Romania,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,1.8516499476381496e-05,3.7041404246344223e-05,7.602137927473172e-06
+5,Prevalence,52,Romania,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,4.0571197164466375e-06,8.111748318557396e-06,1.6655933385393749e-06
+5,Prevalence,385,Puerto Rico,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,1.4155399521002128e-06,4.268508130657907e-06,2.820545666262608e-07
+5,Prevalence,385,Puerto Rico,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,1.1179371519970562e-07,3.3731540955714834e-07,2.2273810604423005e-08
+5,Prevalence,74,Andorra,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,5.6032177370155606e-05,6.662788142196402e-05,4.7479170755347325e-05
+5,Prevalence,143,Iraq,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.0005574123382467295,0.0006564203727011254,0.0004742187354805287
+5,Prevalence,49,North Macedonia,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.00022130731592788519,0.000262680821306437,0.0001869050836786043
+5,Prevalence,140,Bahrain,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,7.928637854984683e-06,2.333220277958902e-05,1.2746474750579584e-06
+5,Prevalence,140,Bahrain,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,2.7983685770419453e-07,8.2330071162959e-07,4.4959998972493005e-08
+5,Prevalence,157,Yemen,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,1.3777926353303419e-05,4.964711642322906e-05,2.947180287194127e-06
+5,Prevalence,157,Yemen,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,4.862633502083665e-07,1.753282401453457e-06,1.0405837463739966e-07
+5,Prevalence,151,Qatar,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,1.4890695457271907e-07,4.795653591106311e-07,3.150666654927654e-08
+5,Prevalence,132,Panama,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,1.307474811176239e-05,4.786939004982168e-05,1.6130548659220169e-06
+5,Prevalence,132,Panama,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,1.0325652777564722e-06,3.780165738483691e-06,1.273228657207588e-07
+5,Prevalence,74,Andorra,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,1.2749928035253083e-07,5.057638841913035e-07,1.4033524052373103e-08
+5,Prevalence,74,Andorra,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,1.6029959438775983e-08,6.356595315902729e-08,1.763493915767962e-09
+5,Prevalence,143,Iraq,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,1.620249092350066e-05,3.774358935693891e-05,4.807134773517491e-06
+5,Prevalence,143,Iraq,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,5.718624579095044e-07,1.332377511906866e-06,1.6982029779167168e-07
+5,Prevalence,63,Ukraine,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.0007322175929764555,0.0009555062051963071,0.0005244333857439438
+5,Prevalence,128,Guatemala,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.0003147994644662695,0.0003673028026342536,0.0002687761298638347
+5,Prevalence,128,Guatemala,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,7.848114718260233e-06,2.406161737257135e-05,1.1707681075490312e-06
+5,Prevalence,13,Malaysia,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,9.358445073658682e-07,2.5363714474783113e-06,2.2813297219434125e-07
+5,Prevalence,63,Ukraine,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,0.00027987426042152907,0.0004447990998957817,0.00014529269775818713
+5,Prevalence,63,Ukraine,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,6.13223121539185e-05,9.745776793856912e-05,3.183561012867291e-05
+5,Prevalence,369,Nauru,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.0012709347155754472,0.0014727155780792302,0.001082639176367745
+5,Prevalence,369,Nauru,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,3.5825501733920456e-06,1.6137503055406635e-05,3.6827311924893296e-07
+5,Prevalence,128,Guatemala,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,6.198077517840706e-07,1.8998818521047179e-06,9.24680722140001e-08
+5,Prevalence,92,Spain,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,7.368947129548835e-05,8.677679148192652e-05,6.25155162142182e-05
+5,Prevalence,59,Latvia,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,4.765318640548477e-05,8.602504217230271e-05,2.31235956364966e-05
+5,Prevalence,59,Latvia,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,1.0441123273914635e-05,1.8846384148717165e-05,5.0695927906275405e-06
+5,Prevalence,396,San Marino,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,6.891149464390603e-05,8.137812417291334e-05,5.8576111512907086e-05
+5,Prevalence,71,Australia,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,1.6352344617633798e-06,3.4421460068107404e-06,6.572435728437724e-07
+5,Prevalence,71,Australia,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,2.0558957247606366e-07,4.3305371586507454e-07,8.26194196731117e-08
+5,Prevalence,59,Latvia,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.0004559311021299686,0.0005468236986330748,0.0003797625265870121
+5,Prevalence,87,Luxembourg,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,7.3172233972907e-05,8.781787671766711e-05,6.109560191414755e-05
+5,Prevalence,212,Mauritania,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.0014991534645777556,0.0017459454630292725,0.0012763651776212255
+5,Prevalence,87,Luxembourg,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,1.8488737452797764e-06,6.506173342176895e-06,2.676139053677858e-07
+5,Prevalence,87,Luxembourg,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,2.324544281752443e-07,8.193654530774904e-07,3.3648335931320344e-08
+5,Prevalence,212,Mauritania,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,3.44994029334319e-05,0.00011056482049387131,4.144541066175263e-06
+5,Prevalence,212,Mauritania,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,2.2257583417028023e-07,7.12997579129987e-07,2.6749268171818638e-08
+5,Prevalence,149,Palestine,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.00020434271534752152,0.00024591225988881494,0.00016899324328533444
+5,Prevalence,130,Mexico,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.00028495363731155814,0.0003371708154515343,0.00023874374721033994
+5,Prevalence,71,Australia,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,5.128678483288651e-05,6.154583277314032e-05,4.316871118319429e-05
+5,Prevalence,54,Slovakia,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.00011746368405865024,0.00014000773924854114,9.901837278453621e-05
+5,Prevalence,90,Norway,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,1.2777017209151096e-06,3.3123770878764706e-06,3.760901991786832e-07
+5,Prevalence,90,Norway,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,1.6064005269075202e-07,4.165267147301912e-07,4.7274271126755424e-08
+5,Prevalence,114,Haiti,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.001233491680105219,0.0014311700664621039,0.0010538280123492695
+5,Prevalence,105,Antigua and Barbuda,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.00036187614429540973,0.0004354532685458006,0.0002976061919940968
+5,Prevalence,113,Guyana,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.0009152744529839214,0.0010784776336409056,0.0007691249354716617
+5,Prevalence,374,Niue,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,2.437592516505076e-06,1.1044030192950758e-05,2.683177825491144e-07
+5,Prevalence,374,Niue,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,2.222615242641292e-07,1.0073099131923673e-06,2.4470775546640133e-08
+5,Prevalence,55,Slovenia,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,1.072830895537559e-07,4.009973840499531e-07,1.504426728524114e-08
+5,Prevalence,55,Slovenia,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,2.3506929693853548e-08,8.788257643065044e-08,3.2958684789580034e-09
+5,Prevalence,55,Slovenia,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,9.929692873489573e-05,0.00011638757576806802,8.480277279207573e-05
+5,Prevalence,206,Gambia,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.004583837774859964,0.00541268059113095,0.0039522259308346006
+5,Prevalence,206,Gambia,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,0.00010441839258998032,0.0003451350264288459,1.3500965861957445e-05
+5,Prevalence,206,Gambia,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,6.736536494787877e-07,2.2261414380325154e-06,8.711718910608932e-08
+5,Prevalence,150,Oman,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,4.2915896599972945e-06,1.2028253127341273e-05,9.292875993570106e-07
+5,Prevalence,150,Oman,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,1.514648924231296e-07,4.246637862635994e-07,3.279370943033282e-08
+5,Prevalence,89,Netherlands,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,6.213073907148883e-05,7.34472034299665e-05,5.257269749361145e-05
+5,Prevalence,131,Nicaragua,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,6.594864498486393e-06,1.796897447256969e-05,1.1484160833403856e-06
+5,Prevalence,413,Tokelau,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,3.009314073838077e-06,1.4691188940835588e-05,2.37826823186099e-07
+5,Prevalence,413,Tokelau,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,2.743937101801991e-07,1.3395558044883033e-06,2.168023281195315e-08
+5,Prevalence,89,Netherlands,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,1.1974813655246084e-06,2.6027073915532513e-06,4.4999831323444157e-07
+5,Prevalence,89,Netherlands,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,1.50554516780498e-07,3.2721380792346695e-07,5.65276779305056e-08
+5,Prevalence,191,Zambia,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.003766404769610499,0.004557116271773508,0.0030819717200213427
+5,Prevalence,78,Denmark,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,7.633332801311293e-05,9.103735260985972e-05,6.465974130055509e-05
+5,Prevalence,78,Denmark,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,1.244242158097846e-06,3.174377798164021e-06,3.7341740053344325e-07
+5,Prevalence,78,Denmark,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,1.5643409993129295e-07,3.9919266557189615e-07,4.696528156304992e-08
+5,Prevalence,131,Nicaragua,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,5.208251311676892e-07,1.4191751944976786e-06,9.070210365695958e-08
+5,Prevalence,149,Palestine,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,4.356292077010248e-06,1.769758060401531e-05,5.217099653555885e-07
+5,Prevalence,149,Palestine,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,1.5375118853142977e-07,6.243787978484275e-07,1.8412021802749962e-08
+5,Prevalence,129,Honduras,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.0004869165870675105,0.0005645948036993948,0.0004152657095485782
+5,Prevalence,129,Honduras,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,1.2179634049335655e-05,4.0860276558210494e-05,1.9571536201379503e-06
+5,Prevalence,129,Honduras,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,9.618907057188344e-07,3.226737933255528e-06,1.5454265880269828e-07
+5,Prevalence,413,Tokelau,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.0009980934681485842,0.001132972201483526,0.0008696767465204698
+5,Prevalence,85,Israel,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,4.806500855887348e-05,5.8064083508786696e-05,3.981096926175387e-05
+5,Prevalence,8,Taiwan (Province of China),3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.001239090367091527,0.001423037757026877,0.0010680807535285734
+5,Prevalence,177,Djibouti,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,0.0002342470996255412,0.0004856375226376584,0.0001034189033766262
+5,Prevalence,177,Djibouti,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,1.511286164016266e-06,3.1339431665246017e-06,6.671334019900192e-07
+5,Prevalence,130,Mexico,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,8.657104024878769e-06,2.467368404269469e-05,1.7364974905980635e-06
+5,Prevalence,130,Mexico,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,6.836954685387511e-07,1.9485248595258526e-06,1.3714829831723194e-07
+5,Prevalence,40,Turkmenistan,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.0010222828468433578,0.0012732710831715199,0.0007527909077813676
+5,Prevalence,40,Turkmenistan,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,0.00018144077838279943,0.0003609072430799409,6.592266513644711e-05
+5,Prevalence,40,Turkmenistan,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,3.975502201781432e-05,7.90715704013195e-05,1.4443638809870592e-05
+5,Prevalence,17,Sri Lanka,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.0010519723144814751,0.0012282348259366315,0.0009071122573449222
+5,Prevalence,17,Sri Lanka,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,3.856946959028536e-06,1.4484998997213445e-05,3.6254744051036166e-07
+5,Prevalence,17,Sri Lanka,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,3.516818280571045e-07,1.3211852562328153e-06,3.3068424952881955e-08
+5,Prevalence,154,Tunisia,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.000311697500407684,0.0003664383247137844,0.0002662268993221906
+5,Prevalence,6,China,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.0009487871086102331,0.0010826634376445705,0.0008140341222066154
+5,Prevalence,144,Jordan,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,6.907138193100348e-05,8.207220548765612e-05,5.6790197235699713e-05
+5,Prevalence,105,Antigua and Barbuda,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,2.2301971115285838e-06,1.0141081607212692e-05,2.1533232755103398e-07
+5,Prevalence,105,Antigua and Barbuda,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,1.7613563278167475e-07,8.010653136481144e-07,1.7013841257885797e-08
+5,Prevalence,416,Tuvalu,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,4.1693698250665645e-06,1.868085200653964e-05,3.371463212691969e-07
+5,Prevalence,416,Tuvalu,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,3.801668568689335e-07,1.7025835965569797e-06,3.0749865132169487e-08
+5,Prevalence,153,Syrian Arab Republic,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.00022425589190041233,0.00026713914113810647,0.00018642838179311493
+5,Prevalence,94,Switzerland,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,6.849553478021265e-05,8.141233165565743e-05,5.7510809602242814e-05
+5,Prevalence,162,Bhutan,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.0012565187186122624,0.001480619266853221,0.0010589282501513805
+5,Prevalence,162,Bhutan,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,5.2261522070411505e-05,0.0001742715813146591,7.435991939643546e-06
+5,Prevalence,162,Bhutan,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,1.2809339147255099e-06,4.271490289103162e-06,1.8221378615638077e-07
+5,Prevalence,385,Puerto Rico,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.00011044898235656595,0.00012940824346056003,9.374118098876908e-05
+5,Prevalence,76,Belgium,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,8.894051210752815e-05,0.00010500173020038653,7.602051908866967e-05
+5,Prevalence,76,Belgium,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,1.5097804359798443e-06,3.6632790245522734e-06,4.969315490563317e-07
+5,Prevalence,76,Belgium,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,1.8982202420669502e-07,4.603748786569717e-07,6.246234405349893e-08
+5,Prevalence,95,United Kingdom,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,7.329412783821601e-05,8.655240964572582e-05,6.195609937657755e-05
+5,Prevalence,157,Yemen,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.0006384982259672265,0.0007515030565189893,0.0005422023062872699
+5,Prevalence,217,Sierra Leone,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.003331638911735765,0.003921424189241964,0.002822266028561731
+5,Prevalence,210,Liberia,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.0027739580143583717,0.003245828519746108,0.0023487173425577627
+5,Prevalence,95,United Kingdom,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,9.175571513215135e-07,1.9375176813904637e-06,3.3792109619152786e-07
+5,Prevalence,95,United Kingdom,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,1.1536029637290795e-07,2.4358434686963565e-07,4.2503852263214556e-08
+5,Prevalence,210,Liberia,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,5.420503286318948e-05,0.00021059537479756383,6.228483507742842e-06
+5,Prevalence,210,Liberia,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,3.4970465228512754e-07,1.3594397384853389e-06,4.0172361375374314e-08
+5,Prevalence,132,Panama,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.0005835039731519605,0.0006838160052074219,0.0004997774729850818
+5,Prevalence,217,Sierra Leone,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,7.375710232555255e-05,0.0002324825051692575,1.050768136670461e-05
+5,Prevalence,217,Sierra Leone,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,4.7585074760176103e-07,1.499739499565947e-06,6.780847064179245e-08
+5,Prevalence,133,Venezuela (Bolivarian Republic of),3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.00038887461875849674,0.0004498214569423014,0.0003305278523091073
+5,Prevalence,152,Saudi Arabia,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.0006797366123166801,0.000812276253521466,0.0005594166883556168
+5,Prevalence,154,Tunisia,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,4.020039760614595e-06,9.778767725342787e-06,1.210888291960559e-06
+5,Prevalence,154,Tunisia,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,1.418861590110316e-07,3.450475406452486e-07,4.2762005096262106e-08
+5,Prevalence,393,Saint Kitts and Nevis,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,1.8587590187211188e-06,8.042289419238716e-06,1.7936785509895158e-07
+5,Prevalence,24,Marshall Islands,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.001863531055222849,0.002096084680904045,0.001644511764690828
+5,Prevalence,163,India,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,0.00025347867721754844,0.0006311690195236562,4.9604720191378113e-05
+5,Prevalence,163,India,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,6.212723590677771e-06,1.5468754719171468e-05,1.2157701254450745e-06
+5,Prevalence,189,United Republic of Tanzania,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.003346139872622631,0.003928154879373411,0.002798545876388149
+5,Prevalence,24,Marshall Islands,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,1.8577141987260133e-05,6.101714813943643e-05,3.1117617914508985e-06
+5,Prevalence,24,Marshall Islands,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,1.6938670647813654e-06,5.5633078185807655e-06,2.836893782737648e-07
+5,Prevalence,26,Papua New Guinea,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.0019298189244500712,0.0021818675594599446,0.0017032020632860682
+5,Prevalence,44,Bosnia and Herzegovina,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.00031767303079055704,0.0003716790075694005,0.0002699121009242433
+5,Prevalence,393,Saint Kitts and Nevis,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,1.4679218184480875e-07,6.35375388875092e-07,1.4163274708874408e-08
+5,Prevalence,155,Turkey,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,1.5037667690888767e-05,2.985649532403461e-05,6.860753999326675e-06
+5,Prevalence,155,Turkey,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,5.307330932290381e-07,1.0537483705860906e-06,2.4216271259592985e-07
+5,Prevalence,153,Syrian Arab Republic,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,5.901863264895111e-06,2.4584292258613127e-05,8.338808672250251e-07
+5,Prevalence,153,Syrian Arab Republic,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,2.0829932653579985e-07,8.682713968354238e-07,2.9430296917558635e-08
+5,Prevalence,38,Mongolia,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,0.000181120581914145,0.0005045521784139925,3.758974855418139e-05
+5,Prevalence,38,Mongolia,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,3.968463251887544e-05,0.00011054619817539894,8.23520037424567e-06
+5,Prevalence,45,Bulgaria,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,6.433465989452445e-06,1.4905406800435552e-05,1.7189361683082038e-06
+5,Prevalence,45,Bulgaria,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,1.409621984444487e-06,3.266599910695394e-06,3.766345310453228e-07
+5,Prevalence,181,Madagascar,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.005233751019671674,0.006196100876055618,0.004379212317577252
+5,Prevalence,10,Cambodia,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,3.050074501550436e-06,1.0301725750288745e-05,4.575822513049486e-07
+5,Prevalence,22,Fiji,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.0009555712477073723,0.0010828691347808037,0.0008374132374166882
+5,Prevalence,22,Fiji,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,1.7986358168833077e-06,7.496575839134341e-06,1.6239352594919774e-07
+5,Prevalence,22,Fiji,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,1.6400388530899113e-07,6.835840056157884e-07,1.4807694355746328e-08
+5,Prevalence,213,Niger,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.002369229246408268,0.0027638204238120217,0.0020266887259603864
+5,Prevalence,121,Bolivia (Plurinational State of),3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.0012308384785957118,0.001454620684462401,0.0010129687677455498
+5,Prevalence,121,Bolivia (Plurinational State of),3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,6.0437780290649955e-05,0.00019753629657357473,9.077924119136108e-06
+5,Prevalence,121,Bolivia (Plurinational State of),3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,4.773026028801335e-06,1.560395161877048e-05,7.166721065591559e-07
+5,Prevalence,35,Georgia,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,0.0001482021227238239,0.00023442733253980905,8.449387884817368e-05
+5,Prevalence,35,Georgia,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,3.247214514628139e-05,5.136267079797858e-05,1.851865349838292e-05
+5,Prevalence,189,United Republic of Tanzania,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,8.405578520003948e-05,0.0002748352224170026,1.4912431516171795e-05
+5,Prevalence,94,Switzerland,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,2.670593820272671e-06,5.66696805858493e-06,1.0569259157183105e-06
+5,Prevalence,94,Switzerland,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,3.357598148916889e-07,7.125047248601025e-07,1.3288782104418508e-07
+5,Prevalence,189,United Republic of Tanzania,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,5.422878815044389e-07,1.7723691381306297e-06,9.624309687477097e-08
+5,Prevalence,416,Tuvalu,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.00140601580757275,0.0015886694209062795,0.0012397429529319181
+5,Prevalence,320,Cook Islands,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.0005594549043696466,0.0006546436262038024,0.00047695542071375614
+5,Prevalence,28,Solomon Islands,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.0010583178400362092,0.001198677886006621,0.0009146970733703026
+5,Prevalence,28,Solomon Islands,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,3.2331896415791065e-06,1.318573781932063e-05,2.3616033510955822e-07
+5,Prevalence,28,Solomon Islands,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,2.9481472726158127e-07,1.2024614322977753e-06,2.1534019277216737e-08
+5,Prevalence,169,Central African Republic,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.0065534509602661484,0.007394818215467142,0.005790647598418321
+5,Prevalence,25,Micronesia (Federated States of),3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.0015656405763243822,0.0017913655581603353,0.0013663654972497232
+5,Prevalence,422,United States Virgin Islands,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,8.053660843258485e-07,2.98612904348612e-06,9.361191283911102e-08
+5,Prevalence,422,United States Virgin Islands,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,6.360366560771764e-08,2.3584864424271686e-07,7.395305993345005e-09
+5,Prevalence,43,Albania,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,6.857456688134414e-07,1.955499370109733e-06,1.4042800520377226e-07
+5,Prevalence,43,Albania,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,1.502548265030239e-07,4.2840937354568987e-07,3.0766434995223894e-08
+5,Prevalence,25,Micronesia (Federated States of),3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,4.726998375636941e-06,2.2824241414968213e-05,3.0879745992131213e-07
+5,Prevalence,25,Micronesia (Federated States of),3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,4.3101799447882675e-07,2.081166986977614e-06,2.815733349500449e-08
+5,Prevalence,163,India,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.003573404061008489,0.004247504486721266,0.0029494271949701317
+5,Prevalence,177,Djibouti,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.0033510032366808025,0.0039718541027507215,0.0027763045173262516
+5,Prevalence,168,Angola,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.0040777537272393225,0.004693571618332944,0.0034691104378504066
+5,Prevalence,160,Afghanistan,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.0010899655691564902,0.0013093946565646921,0.0008949020514520888
+5,Prevalence,72,New Zealand,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,7.893598203729486e-05,9.459298459364727e-05,6.597505623816864e-05
+5,Prevalence,160,Afghanistan,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,4.8671281862108274e-05,0.00016120158738857295,8.49813906575986e-06
+5,Prevalence,160,Afghanistan,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,1.7178240225809428e-06,5.686669178789403e-06,2.9985522861905926e-07
+5,Prevalence,164,Nepal,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,0.00011266994434748526,0.00029552113696992523,2.784958313282088e-05
+5,Prevalence,164,Nepal,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,2.761525271945912e-06,7.242241745707596e-06,6.826421883554061e-07
+5,Prevalence,33,Armenia,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.00043472839303840125,0.0005480501187889893,0.00030648361916244525
+5,Prevalence,168,Angola,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,0.00011638621076685305,0.0004293903605335325,1.5156900857644534e-05
+5,Prevalence,168,Angola,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,7.508744625423123e-07,2.7708800967957487e-06,9.788185594954055e-08
+5,Prevalence,115,Jamaica,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.00014907835253226661,0.00017874631510224974,0.00012302614516232886
+5,Prevalence,147,Libya,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.00032595633979713733,0.0003851116630754545,0.0002745393180431614
+5,Prevalence,147,Libya,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,6.192363305963044e-06,2.2050265538509703e-05,6.876177113707687e-07
+5,Prevalence,147,Libya,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,2.185569314938693e-07,7.773720843958038e-07,2.426739621550704e-08
+5,Prevalence,200,Benin,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.002368369196357126,0.0027728858656126875,0.002018612377407513
+5,Prevalence,8,Taiwan (Province of China),3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,2.5895045660085662e-05,9.628693441648361e-05,2.9938207587318896e-06
+5,Prevalence,8,Taiwan (Province of China),3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,2.3611173115039435e-06,8.779513948064691e-06,2.729855220915283e-07
+5,Prevalence,38,Mongolia,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.0017387013925737934,0.002148008932331129,0.001297215918379083
+5,Prevalence,133,Venezuela (Bolivarian Republic of),3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,7.193780197545368e-06,2.4609882663502494e-05,8.715983668418964e-07
+5,Prevalence,133,Venezuela (Bolivarian Republic of),3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,5.681420013092294e-07,1.9438855632012326e-06,6.886445325898831e-08
+5,Prevalence,178,Eritrea,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,0.0002787283745844176,0.0009130396554610221,4.1650805345287694e-05
+5,Prevalence,178,Eritrea,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,1.7982505963521473e-06,5.889580311371954e-06,2.687549175185346e-07
+5,Prevalence,34,Azerbaijan,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,0.00018408790916516507,0.0003626395431131801,5.60386659474835e-05
+5,Prevalence,34,Azerbaijan,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,4.033493985923398e-05,7.946213145571913e-05,1.2274583362952091e-05
+5,Prevalence,202,Cameroon,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.0024816769992685966,0.0029135846469924244,0.0021054898544630666
+5,Prevalence,148,Morocco,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,8.869712328826603e-07,2.0121754289878325e-06,2.610521186902329e-07
+5,Prevalence,193,Botswana,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.004796305447182275,0.0059797222779956385,0.003811444189905164
+5,Prevalence,39,Tajikistan,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.001061170763288517,0.001312777001920813,0.0008348825943390453
+5,Prevalence,39,Tajikistan,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,0.00016911491932546435,0.00030605573716368866,7.673946152043585e-05
+5,Prevalence,39,Tajikistan,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,3.705432059055177e-05,6.704963579527134e-05,1.682340625613799e-05
+5,Prevalence,193,Botswana,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,0.00023377489607335575,0.0007084119983212333,4.295211355159668e-05
+5,Prevalence,193,Botswana,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,1.5082191601465958e-06,4.56812475647681e-06,2.7706359032516025e-07
+5,Prevalence,99,Uruguay,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.000236580372144562,0.0002765719025392825,0.0002034568084938503
+5,Prevalence,179,Ethiopia,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,0.00010122158326228134,0.000333261176409574,1.8933928199537074e-05
+5,Prevalence,179,Ethiopia,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,6.530456635319676e-07,2.149598767491886e-06,1.2218381253948774e-07
+5,Prevalence,101,Canada,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,5.3647777331745796e-05,6.406833858783473e-05,4.491361123047741e-05
+5,Prevalence,201,Burkina Faso,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,8.95295061937407e-05,0.00029575195109663517,1.3018743084480007e-05
+5,Prevalence,201,Burkina Faso,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,5.776065860727653e-07,1.9080371959875868e-06,8.398974601076275e-08
+5,Prevalence,349,Greenland,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.0003483690692581339,0.0004154877017346614,0.00029376771516962763
+5,Prevalence,29,Tonga,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.0009005382936533826,0.001024403803452733,0.0007874571289686652
+5,Prevalence,29,Tonga,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,2.5735252956497056e-06,1.0883074409452921e-05,2.4289355602240805e-07
+5,Prevalence,29,Tonga,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,2.3465277410947216e-07,9.923619858481933e-07,2.2151873819532045e-08
+5,Prevalence,114,Haiti,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,4.88667502822753e-06,1.8462313765510603e-05,4.942711941143294e-07
+5,Prevalence,114,Haiti,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,3.8591325120216366e-07,1.4574454727611362e-06,3.898241883253725e-08
+5,Prevalence,27,Samoa,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,8.054559125131335e-07,2.8718026354348533e-06,8.726221150749225e-08
+5,Prevalence,27,Samoa,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,7.344161789777813e-08,2.619530213114069e-07,7.959753299291056e-09
+5,Prevalence,197,Eswatini,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.005167787266916828,0.006696305382114945,0.0038434670825712755
+5,Prevalence,102,United States of America,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,3.872175270404149e-05,4.6497576772334936e-05,3.236861616508512e-05
+5,Prevalence,43,Albania,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,9.18052948761746e-05,0.00010749340379858862,7.706694170098089e-05
+5,Prevalence,102,United States of America,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,5.209214002420292e-07,1.1024450297649912e-06,2.0689704252730823e-07
+5,Prevalence,164,Nepal,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.0023640434251520504,0.002746307531037575,0.0020354969687624513
+5,Prevalence,44,Bosnia and Herzegovina,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,1.4441106486049301e-06,3.865932297431159e-06,3.783298758929804e-07
+5,Prevalence,44,Bosnia and Herzegovina,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,3.1642085161448994e-07,8.468440341919183e-07,8.285711929886776e-08
+5,Prevalence,49,North Macedonia,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,2.946177508509448e-06,7.186546972154434e-06,9.6373359149029e-07
+5,Prevalence,49,North Macedonia,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,6.455168783098187e-07,1.5736922020592848e-06,2.1125513510392672e-07
+5,Prevalence,183,Mauritius,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.00044420761430925885,0.0005203332089381865,0.00038083983604406336
+5,Prevalence,183,Mauritius,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,2.161690405298639e-06,6.380528301790088e-06,4.914733130949203e-07
+5,Prevalence,183,Mauritius,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,1.9709833255210764e-07,5.816546336319642e-07,4.4812638317297e-08
+5,Prevalence,165,Pakistan,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.003939197744120128,0.0046242592475237735,0.003359803498418044
+5,Prevalence,190,Uganda,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,9.658723096244312e-05,0.00025071755825992447,2.0088603164304894e-05
+5,Prevalence,190,Uganda,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,6.231544651710685e-07,1.6174445991867317e-06,1.2966748166735014e-07
+5,Prevalence,320,Cook Islands,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,1.5279812296515166e-06,6.610244047542691e-06,1.3722443149768444e-07
+5,Prevalence,320,Cook Islands,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,1.39319888500805e-07,6.024924276338743e-07,1.2507721210019453e-08
+5,Prevalence,205,Côte d'Ivoire,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.0027346658785364626,0.00320175247660188,0.0023285491593264215
+5,Prevalence,205,Côte d'Ivoire,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,8.919002944473703e-05,0.0003046402589575419,1.4155353105621618e-05
+5,Prevalence,205,Côte d'Ivoire,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,5.754206463715822e-07,1.96512863501481e-06,9.134185130591226e-08
+5,Prevalence,34,Azerbaijan,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.0009018909363240267,0.0011442199495588707,0.0006512397111653229
+5,Prevalence,215,Sao Tome and Principe,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,5.207467392820278e-05,0.00016142924491862958,6.536258851028395e-06
+5,Prevalence,215,Sao Tome and Principe,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,3.3596073420357395e-07,1.0413746890374432e-06,4.216464283343355e-08
+5,Prevalence,108,Belize,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.0005892822850789116,0.000696369427699072,0.0004963870012927274
+5,Prevalence,211,Mali,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.002472046603635343,0.0028680681764620343,0.002109034095162277
+5,Prevalence,211,Mali,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,6.531264674396496e-05,0.00019363441940740983,8.505027335549662e-06
+5,Prevalence,211,Mali,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,4.2137854713214117e-07,1.2493959920765569e-06,5.487622136661265e-08
+5,Prevalence,198,Zimbabwe,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.004110753733611114,0.005123186534352698,0.003238903873698158
+5,Prevalence,198,Zimbabwe,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,0.00021433401058456203,0.0006962130016539062,3.153618746429357e-05
+5,Prevalence,198,Zimbabwe,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,1.3828114471447963e-06,4.491334800871093e-06,2.0350483615611835e-07
+5,Prevalence,190,Uganda,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.0029188495507478274,0.003383585259097128,0.0024974911812107843
+5,Prevalence,16,Philippines,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.003984550875709553,0.004496016741213504,0.0035231391999793697
+5,Prevalence,16,Philippines,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,0.0001096260195836891,0.0002490719923079782,3.149693122741968e-05
+5,Prevalence,16,Philippines,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,9.995779663109258e-06,2.2711277392649005e-05,2.871852333294316e-06
+5,Prevalence,69,Singapore,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.00021427470769576302,0.0002576123004993899,0.00017829915495024925
+5,Prevalence,69,Singapore,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,2.4108305155600735e-06,4.868992758338816e-06,1.0354468601096575e-06
+5,Prevalence,69,Singapore,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,3.030925080886914e-07,6.119961344754745e-07,1.3022970364047367e-07
+5,Prevalence,113,Guyana,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,6.1683207412272865e-06,3.335994914078109e-05,5.771154719403517e-07
+5,Prevalence,113,Guyana,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,4.871589062844815e-07,2.6340149993272287e-06,4.560242781354547e-08
+5,Prevalence,107,Barbados,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.00020143478954147613,0.00023920242174161965,0.00017002017901755612
+5,Prevalence,92,Spain,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,8.589050890076108e-07,3.1565543140183197e-06,1.1121309920828633e-07
+5,Prevalence,92,Spain,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,1.0798559589278433e-07,3.970907153693803e-07,1.3979536200253467e-08
+5,Prevalence,101,Canada,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,6.576905576904568e-07,1.4888194193047138e-06,2.3416825799851594e-07
+5,Prevalence,101,Canada,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,8.268883721034581e-08,1.8718522500211818e-07,2.9444886878971916e-08
+5,Prevalence,178,Eritrea,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.007161033339249956,0.008477916717924645,0.005938188692468958
+5,Prevalence,165,Pakistan,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,0.00022177886185922825,0.0005345962693338091,7.041568991412993e-05
+5,Prevalence,165,Pakistan,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,5.435738941762351e-06,1.3103446304652787e-05,1.726126156694537e-06
+5,Prevalence,435,South Sudan,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.003951850311108464,0.004625172720996443,0.0033095509014556823
+5,Prevalence,435,South Sudan,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,0.00015248642287789504,0.0004792503380874575,2.4168508449630143e-05
+5,Prevalence,435,South Sudan,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,9.837979912121547e-07,3.09185186951878e-06,1.5589537858792348e-07
+5,Prevalence,108,Belize,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,2.6465203711806597e-06,1.1183470144197287e-05,3.1926584265320653e-07
+5,Prevalence,108,Belize,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,2.0901151097606853e-07,8.836265159810735e-07,2.521324430338015e-08
+5,Prevalence,522,Sudan,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.0005917239697120434,0.0006990794034968949,0.0004969552831752392
+5,Prevalence,522,Sudan,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,1.1759983920055884e-05,4.7271384156881336e-05,1.3533287422738954e-06
+5,Prevalence,33,Armenia,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,7.473925660016252e-05,0.00017747325348495052,1.6021502062858946e-05
+5,Prevalence,33,Armenia,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,1.637603423615582e-05,3.887920202955948e-05,3.509388026269038e-06
+5,Prevalence,522,Sudan,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,4.150682512539913e-07,1.6673790364343336e-06,4.777624503599738e-08
+5,Prevalence,102,United States of America,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,6.549308689029763e-08,1.3862827946666507e-07,2.6013384948464378e-08
+5,Prevalence,179,Ethiopia,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.0031223387325333414,0.0036638982333064094,0.002646221852183903
+5,Prevalence,187,Somalia,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.005092163607225624,0.006159371407971335,0.004117268061419744
+5,Prevalence,374,Niue,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.0009313696779865947,0.0010718509281532453,0.0008014117688661182
+5,Prevalence,53,Serbia,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.0001975327764915003,0.00023258726569369255,0.00016798417599424076
+5,Prevalence,180,Kenya,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.0038779542428714116,0.004589926537954604,0.0032833606259967283
+5,Prevalence,180,Kenya,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,5.9718623394644045e-05,0.00014136534460639958,1.9320375755063215e-05
+5,Prevalence,180,Kenya,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,3.8527969134093813e-07,9.119778285595187e-07,1.2465398129240047e-07
+5,Prevalence,305,Bermuda,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.0003172274060900349,0.0003815697027563755,0.0002648638706041635
+5,Prevalence,305,Bermuda,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,1.578084558409488e-06,9.010308123793866e-06,8.565811344897148e-08
+5,Prevalence,135,Brazil,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.0003858431668190887,0.00045103701460906347,0.0003316695033813168
+5,Prevalence,170,Congo,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.003602454303321083,0.004126931422255671,0.0031112351525381782
+5,Prevalence,376,Northern Mariana Islands,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,7.756672745704495e-06,2.7261853655671842e-05,1.1305405647624726e-06
+5,Prevalence,376,Northern Mariana Islands,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,7.072646942828809e-07,2.486435142516528e-06,1.0303608647998761e-07
+5,Prevalence,135,Brazil,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,1.1156127827060443e-05,3.147241772982751e-05,2.0882305512321545e-06
+5,Prevalence,135,Brazil,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,8.810621883430967e-07,2.485448852162588e-06,1.6492540318442462e-07
+5,Prevalence,209,Guinea-Bissau,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.0024348907458134495,0.0028847308029849614,0.0020322422191088154
+5,Prevalence,209,Guinea-Bissau,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,4.4200262149334796e-05,0.00014963222509920793,6.714281629892153e-06
+5,Prevalence,60,Lithuania,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,0.00013115225069607435,0.00020312966613476136,7.462617846529957e-05
+5,Prevalence,60,Lithuania,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,2.8736568246805354e-05,4.4506618772075296e-05,1.634345886467513e-05
+5,Prevalence,209,Guinea-Bissau,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,2.851557032203347e-07,9.651442202490687e-07,4.332765759391264e-08
+5,Prevalence,216,Senegal,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.002611620661854344,0.0030388643516645157,0.002243614736585502
+5,Prevalence,216,Senegal,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,5.8294646223945755e-05,0.0001307098451116537,1.7688902513409446e-05
+5,Prevalence,216,Senegal,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,3.7609666319762915e-07,8.431380305102081e-07,1.1411175263057906e-07
+5,Prevalence,197,Eswatini,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,0.0005824320838388466,0.0014467763037645932,0.00014388878431936578
+5,Prevalence,197,Eswatini,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,3.7577679192626908e-06,9.329644852065505e-06,9.284223089940736e-07
+5,Prevalence,106,Bahamas,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.0003338601366260631,0.0003930217635558568,0.0002812244621162804
+5,Prevalence,20,Viet Nam,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.001694253494923497,0.0018774982107725483,0.0015015416037131258
+5,Prevalence,20,Viet Nam,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,6.679020948390788e-05,0.00016427754798387014,1.9608359988593716e-05
+5,Prevalence,20,Viet Nam,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,6.089943769580538e-06,1.4976564457103759e-05,1.7877430759156214e-06
+5,Prevalence,107,Barbados,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,6.511763074874434e-07,3.2029979628395377e-06,5.046932135020205e-08
+5,Prevalence,107,Barbados,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,5.142846430873017e-08,2.529672129943625e-07,3.9860405458487434e-09
+5,Prevalence,140,Bahrain,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.0002763875576312305,0.00032866089224068356,0.00023241241631655549
+5,Prevalence,393,Saint Kitts and Nevis,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.0003590327311656755,0.000425842474856344,0.00030368986653872754
+5,Prevalence,151,Qatar,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.00020988285980241852,0.0002596664225576973,0.00016747954801096598
+5,Prevalence,13,Malaysia,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.0012622325413786126,0.0014620495988346127,0.0010822207067026609
+5,Prevalence,13,Malaysia,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,1.0263954736610742e-05,2.7814180651654126e-05,2.5019090060610516e-06
+5,Prevalence,141,Egypt,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,1.7681151304411704e-05,4.559618651714328e-05,4.024664813139297e-06
+5,Prevalence,141,Egypt,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,6.240310036241063e-07,1.6083140072243443e-06,1.420147858255729e-07
+5,Prevalence,86,Italy,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,6.143140161667167e-05,7.277398348497989e-05,5.200777159942244e-05
+5,Prevalence,86,Italy,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,1.6474069977276224e-06,3.361584418125455e-06,6.44811676326536e-07
+5,Prevalence,86,Italy,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,2.0711988028057612e-07,4.226438398264513e-07,8.105860954379331e-08
+5,Prevalence,191,Zambia,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,0.00013657613172249894,0.0004563477407604589,2.3224663790588237e-05
+5,Prevalence,191,Zambia,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,8.811244222768724e-07,2.9439577526155598e-06,1.4978406369772105e-07
+5,Prevalence,200,Benin,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,4.4033786750396124e-05,0.0001242286027716588,8.202137200552642e-06
+5,Prevalence,200,Benin,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,2.8409172701438597e-07,8.014698675579135e-07,5.2921062533191326e-08
+5,Prevalence,396,San Marino,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,7.622404796085872e-07,2.786172230339935e-06,9.799526412309908e-08
+5,Prevalence,396,San Marino,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,9.583238132370591e-08,3.5045654288159214e-07,1.2326209736652351e-08
+5,Prevalence,14,Maldives,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,2.8367536915958444e-06,1.19590090984849e-05,3.1155996865014274e-07
+5,Prevalence,14,Maldives,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,2.586554483419944e-07,1.0905034712879994e-06,2.8409680443413865e-08
+5,Prevalence,298,American Samoa,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.0005308607723056789,0.0006217917882027688,0.000450403021982448
+5,Prevalence,298,American Samoa,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,1.5476932587888226e-06,6.74591677041322e-06,1.5725489191184538e-07
+5,Prevalence,298,American Samoa,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,1.411136299570945e-07,6.14842432262139e-07,1.433850300649292e-08
+5,Prevalence,7,Democratic People's Republic of Korea,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.002191992578984894,0.002465431232851298,0.0019442364109832255
+5,Prevalence,7,Democratic People's Republic of Korea,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,9.300493974124892e-05,0.00022028631185658904,3.005824769456322e-05
+5,Prevalence,7,Democratic People's Republic of Korea,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,8.48024461996879e-06,2.008966283816739e-05,2.7407217050640638e-06
+5,Prevalence,109,Cuba,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.00017142102151149758,0.0002021774993513448,0.00014505062095044024
+5,Prevalence,26,Papua New Guinea,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,7.078202553427828e-05,0.00015965737828601968,2.5832212409119904e-05
+5,Prevalence,26,Papua New Guinea,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,6.453919351408603e-06,1.4558719314530778e-05,2.355553058570365e-06
+5,Prevalence,111,Dominican Republic,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.0010013268610567906,0.0011897494051703208,0.000830617400473621
+5,Prevalence,111,Dominican Republic,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,5.0755606603141605e-06,2.4478600338328998e-05,5.192912231600205e-07
+5,Prevalence,111,Dominican Republic,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,4.00858545837462e-07,1.93293296912999e-06,4.1006553918290095e-08
+5,Prevalence,181,Madagascar,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,0.00014014121309192845,0.00043537210239657587,2.1226591207675467e-05
+5,Prevalence,181,Madagascar,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,9.041370540389885e-07,2.80903622924574e-06,1.369183708327905e-07
+5,Prevalence,66,Brunei Darussalam,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.0004024600671578493,0.0004722223437050479,0.0003416218013313585
+5,Prevalence,66,Brunei Darussalam,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,1.2924215941098605e-06,4.2013185047141895e-06,2.0416647044665497e-07
+5,Prevalence,66,Brunei Darussalam,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,1.624877882833183e-07,5.28266724120087e-07,2.567768868349356e-08
+5,Prevalence,195,Namibia,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.005290323951736066,0.006346655099013527,0.004367242172523058
+5,Prevalence,182,Malawi,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.0040205969650854495,0.004773466622286441,0.0033489791338348856
+5,Prevalence,182,Malawi,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,7.627607285495003e-05,0.0002254258880338028,1.4844346496464701e-05
+5,Prevalence,182,Malawi,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,4.920949593668373e-07,1.4546979105584197e-06,9.575196905948149e-08
+5,Prevalence,195,Namibia,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,0.00031935810628674134,0.0006113634327464608,0.0001294441484094441
+5,Prevalence,195,Namibia,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,2.06037639224879e-06,3.943203497556223e-06,8.355253083507888e-07
+5,Prevalence,422,United States Virgin Islands,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.00017856971555933377,0.00020943600536503718,0.00015096253538640533
+5,Prevalence,67,Japan,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.00015615025951213108,0.00019172878194541592,0.00012528420946905465
+5,Prevalence,67,Japan,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,1.2774177744674336e-06,5.422366123177676e-06,1.514352058239902e-07
+5,Prevalence,67,Japan,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,1.6060324543012848e-07,6.817923230333428e-07,1.9039200780578094e-08
+5,Prevalence,196,South Africa,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.006166281927823089,0.007278886404652098,0.005160639355848117
+5,Prevalence,196,South Africa,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,0.00016178544212111046,0.0003835690485012413,6.016271118852993e-05
+5,Prevalence,196,South Africa,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,1.0437830327312109e-06,2.47439344043315e-06,3.881726577022855e-07
+5,Prevalence,351,Guam,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.0006841790183800256,0.000790728314041646,0.0005825473464028129
+5,Prevalence,351,Guam,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,3.2088550446864498e-06,1.1110221706058562e-05,3.4252949007179037e-07
+5,Prevalence,351,Guam,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,2.925820099555014e-07,1.0131629953915357e-06,3.121610554197776e-08
+5,Prevalence,18,Thailand,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.0013877508617038616,0.0016183689830881756,0.001199131328423232
+5,Prevalence,18,Thailand,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,3.270475668377824e-05,8.050895507946851e-05,9.027723229059645e-06
+5,Prevalence,18,Thailand,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,2.9820690048895163e-06,7.3415291583543546e-06,8.228638360789315e-07
+5,Prevalence,12,Lao People's Democratic Republic,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.002456413872606375,0.002892893317978382,0.0021033642634807766
+5,Prevalence,12,Lao People's Democratic Republic,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,1.1185080870509557e-05,4.076359173774277e-05,1.2441300284279748e-06
+5,Prevalence,12,Lao People's Democratic Republic,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,1.0198535460140574e-06,3.7166154413163182e-06,1.1339663388701188e-07
+5,Prevalence,106,Bahamas,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,4.970403439770663e-06,1.8906253639470163e-05,6.845054038459521e-07
+5,Prevalence,106,Bahamas,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,3.9254550530296336e-07,1.4931111365139204e-06,5.4064173758929675e-08
+5,Prevalence,186,Seychelles,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.0007962996608760609,0.0009251794338864846,0.0006877956576916717
+5,Prevalence,186,Seychelles,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,1.7462130986364093e-06,8.594048572952461e-06,1.218224060590861e-07
+5,Prevalence,204,Chad,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.0033616415222336195,0.003905640991131738,0.002871287680067464
+5,Prevalence,99,Uruguay,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,7.43615401281027e-07,2.288988873390192e-06,1.6034266962618452e-07
+5,Prevalence,99,Uruguay,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,9.349065430276948e-08,2.877496691472209e-07,2.0150850274000747e-08
+5,Prevalence,204,Chad,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,8.906147585282713e-05,0.0002724842104937334,1.2437137524449942e-05
+5,Prevalence,204,Chad,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,5.745933167644517e-07,1.7579442684452016e-06,8.024631297513025e-08
+5,Prevalence,349,Greenland,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,6.736483814322253e-06,2.3684950111596673e-05,9.126881560986943e-07
+5,Prevalence,349,Greenland,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,8.469394232436637e-07,2.9768696094016207e-06,1.1472636894738949e-07
+5,Prevalence,30,Vanuatu,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.001639880464701617,0.0018483520476734894,0.0014397178093834447
+5,Prevalence,30,Vanuatu,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,2.9481724955605447e-06,1.2856356072411838e-05,2.3882692091957346e-07
+5,Prevalence,30,Vanuatu,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,2.688044733488357e-07,1.1710071406728156e-06,2.1770183097923664e-08
+5,Prevalence,187,Somalia,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,0.0003572671361583516,0.0009952716130174192,9.864645928463069e-05
+5,Prevalence,187,Somalia,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,2.3049379092571295e-06,6.421230510182926e-06,6.362969679597533e-07
+5,Prevalence,23,Kiribati,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.004453469949839997,0.004978116582454541,0.003949318614789347
+5,Prevalence,23,Kiribati,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,1.2298865799781168e-05,5.103743891518793e-05,1.2053858714211613e-06
+5,Prevalence,23,Kiribati,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,1.1214196938263121e-06,4.652349201704583e-06,1.099527118799356e-07
+5,Prevalence,75,Austria,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,8.246716694839617e-05,9.755579089579201e-05,6.964259823234061e-05
+5,Prevalence,54,Slovakia,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,8.058868622235365e-07,2.529514657911275e-06,1.5943492977629493e-07
+5,Prevalence,54,Slovakia,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,1.7657060236744815e-07,5.539760621679709e-07,3.492859449303474e-08
+5,Prevalence,194,Lesotho,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.0075984797842103225,0.009649319244642957,0.0060438858849465584
+5,Prevalence,213,Niger,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,5.651201321219144e-05,0.00017715499051758265,8.021018895168274e-06
+5,Prevalence,213,Niger,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,3.645883779887074e-07,1.142556149757711e-06,5.175390154734966e-08
+5,Prevalence,110,Dominica,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,3.4915755937241357e-06,1.53673993405378e-05,3.227492713064428e-07
+5,Prevalence,110,Dominica,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,2.757562412115458e-07,1.213876386585755e-06,2.548703938227398e-08
+5,Prevalence,110,Dominica,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.0005910444626187775,0.000691218314848202,0.0005029566651452903
+5,Prevalence,115,Jamaica,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,2.147529566044091e-06,7.659228134683266e-06,3.359643816455648e-07
+5,Prevalence,115,Jamaica,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,1.6960439344574673e-07,6.053914007359145e-07,2.6538488030886705e-08
+5,Prevalence,170,Congo,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,7.306766906896521e-05,0.00026119720878884815,8.363003850725409e-06
+5,Prevalence,170,Congo,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,4.7138655376572644e-07,1.6855552437511047e-06,5.3939617586441096e-08
+5,Prevalence,214,Nigeria,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.0023034570133381406,0.002682270626638784,0.0019633626535503347
+5,Prevalence,72,New Zealand,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,1.3689006012947987e-06,3.859079280915123e-06,3.188865566625167e-07
+5,Prevalence,72,New Zealand,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,1.7210374148404733e-07,4.850757282924404e-07,4.009378519434528e-08
+5,Prevalence,214,Nigeria,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,9.36256485487284e-05,0.0002496427657335813,2.0874102278360982e-05
+5,Prevalence,214,Nigeria,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,6.040355040221116e-07,1.6107158991211124e-06,1.34655097341181e-07
+5,Prevalence,169,Central African Republic,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,9.261380347985222e-05,0.0002976911162262893,1.5184137762917843e-05
+5,Prevalence,169,Central African Republic,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,5.975034414895514e-07,1.920777397517201e-06,9.801438384346792e-08
+5,Prevalence,203,Cabo Verde,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.0017587532878254382,0.002026937391175986,0.0014943258131787846
+5,Prevalence,203,Cabo Verde,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,5.846400910593036e-05,0.00017911796922109733,8.068207676835391e-06
+5,Prevalence,203,Cabo Verde,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,3.7718004707294595e-07,1.1556396459779041e-06,5.2045634160645335e-08
+5,Prevalence,208,Guinea,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.0030519509250519802,0.0035445251640596155,0.0025884032909380887
+5,Prevalence,208,Guinea,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,6.58999943171617e-05,0.00021681851501267026,8.8481628974863e-06
+5,Prevalence,208,Guinea,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,4.251731962258099e-07,1.3989920180039526e-06,5.708522578619581e-08
+5,Prevalence,93,Sweden,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,2.2888411702235867e-06,5.036861545469739e-06,8.154729995052795e-07
+5,Prevalence,93,Sweden,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,2.877664671096827e-07,6.331657545097426e-07,1.0253627772120112e-07
+5,Prevalence,171,Democratic Republic of the Congo,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.004869695917294739,0.005542513722045307,0.004191523017785977
+5,Prevalence,171,Democratic Republic of the Congo,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,0.00011779648366859753,0.0004350294440702762,1.4196772142504233e-05
+5,Prevalence,171,Democratic Republic of the Congo,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,7.599843381491092e-07,2.806757060717586e-06,9.158420352933309e-08
+5,Prevalence,119,Trinidad and Tobago,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.00027986503289312466,0.00032925867931264024,0.00023844890694050484
+5,Prevalence,119,Trinidad and Tobago,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,1.3851623781321505e-06,5.7063510536687904e-06,1.5603358672248288e-07
+5,Prevalence,218,Togo,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.0029482422067521807,0.0034541209427960485,0.0025205166575767443
+5,Prevalence,218,Togo,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,7.15156344307535e-05,0.0002074979019214857,1.0611476174346695e-05
+5,Prevalence,218,Togo,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,4.613915752276887e-07,1.3386231410128878e-06,6.84362448498964e-08
+5,Prevalence,77,Cyprus,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,5.842606722918683e-05,7.025202796106187e-05,4.8492188653642366e-05
+5,Prevalence,173,Gabon,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.003006416732139695,0.0035239093863992294,0.002580180785531624
+5,Prevalence,173,Gabon,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,8.629976007711345e-05,0.0003086166243784321,1.1263987088778411e-05
+5,Prevalence,173,Gabon,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,5.567824089051808e-07,1.9907732598567803e-06,7.261830396509077e-08
+5,Prevalence,77,Cyprus,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,1.070404352833378e-06,3.258096333910454e-06,2.0943528090712952e-07
+5,Prevalence,77,Cyprus,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,1.3457445011199455e-07,4.0952295725548706e-07,2.633488916594164e-08
+5,Prevalence,207,Ghana,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.003028599530476276,0.0035495705031210094,0.0025944980797620075
+5,Prevalence,207,Ghana,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,7.649527309898149e-05,0.0002280211031396659,1.1917187670898378e-05
+5,Prevalence,207,Ghana,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,4.935143731513942e-07,1.472237430445247e-06,7.689893976092584e-08
+5,Prevalence,117,Saint Vincent and the Grenadines,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.0003963451382504477,0.000465307555439502,0.0003382159309465336
+5,Prevalence,117,Saint Vincent and the Grenadines,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,2.009737567611203e-06,7.538327971299975e-06,2.2832303652634384e-07
+5,Prevalence,117,Saint Vincent and the Grenadines,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,1.587200793132631e-07,5.950419216008695e-07,1.8028250323249155e-08
+5,Prevalence,305,Bermuda,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,1.2462816673503186e-07,7.119066267247615e-07,6.7640949491109544e-09
+5,Prevalence,194,Lesotho,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,0.0003347760064261383,0.0007308047664883644,0.00011329786163908678
+5,Prevalence,194,Lesotho,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,2.1598685242227655e-06,4.714689082103209e-06,7.313997635176514e-07
+5,Prevalence,172,Equatorial Guinea,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.002445242304658997,0.002872338157923344,0.0020671206310805216
+5,Prevalence,172,Equatorial Guinea,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,6.0817019672185244e-05,0.00019527741432926818,7.54702510104157e-06
+5,Prevalence,172,Equatorial Guinea,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,3.923676531545605e-07,1.2600254696214117e-06,4.8667041932705974e-08
+5,Prevalence,184,Mozambique,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.004151300354063822,0.004959156911121508,0.003446043603815191
+5,Prevalence,184,Mozambique,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,0.0002164085317192883,0.00047055501356539755,6.781099812250178e-05
+5,Prevalence,184,Mozambique,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,1.3961892950515592e-06,3.0343205718152058e-06,4.375412646468007e-07
+5,Prevalence,75,Austria,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,2.5783500212218756e-06,5.424092654969098e-06,9.654682148462223e-07
+5,Prevalence,75,Austria,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,3.241678058509414e-07,6.822439924574666e-07,1.2136590202598334e-07
+5,Prevalence,185,Rwanda,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,5.463462129835848e-07,1.1526593836357308e-06,2.1321424003529765e-07
+5,Prevalence,367,Monaco,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.00014659127148034345,0.0001739540690797396,0.00012344826883172187
+5,Prevalence,119,Trinidad and Tobago,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,1.0939648348284548e-07,4.5069821214011837e-07,1.232238346548931e-08
+5,Prevalence,152,Saudi Arabia,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,1.883476554781943e-05,5.58987336429155e-05,3.538982035997057e-06
+5,Prevalence,152,Saudi Arabia,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,6.647513312855625e-07,1.9724723686895237e-06,1.2500523056240056e-07
+5,Prevalence,109,Cuba,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,3.841493939416802e-06,1.099139988003866e-05,7.384234783595777e-07
+5,Prevalence,109,Cuba,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,3.0339168600145964e-07,8.685262901152582e-07,5.836494348592451e-08
+5,Prevalence,118,Suriname,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.00033731506497301534,0.0003994164221390818,0.0002843285890266005
+5,Prevalence,118,Suriname,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,1.255335832712824e-06,4.51384192949319e-06,1.4929743614433334e-07
+5,Prevalence,118,Suriname,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,9.914199058846985e-08,3.5671937800776777e-07,1.1786131154779397e-08
+5,Prevalence,185,Rwanda,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.002836833881051984,0.0033507362750933908,0.002397643799081606
+5,Prevalence,185,Rwanda,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,8.468223179758544e-05,0.00017866442214356103,3.3057042744992366e-05
+5,Prevalence,98,Chile,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.00021010241120195155,0.00024649726580627525,0.00018046980071517274
+5,Prevalence,175,Burundi,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.006308882385405478,0.0074118339692436,0.0052142105344963885
+5,Prevalence,176,Comoros,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.004016652194994722,0.004824574831482677,0.003231721110128128
+5,Prevalence,175,Burundi,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,0.0001967214731627933,0.0006649522953650937,2.72495935351994e-05
+5,Prevalence,175,Burundi,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,1.2691872429289541e-06,4.2905023355043585e-06,1.759085892494506e-07
+5,Prevalence,98,Chile,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,2.222732893915792e-06,5.189455564976924e-06,7.326350095198157e-07
+5,Prevalence,98,Chile,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,2.794525182379017e-07,6.527521328213918e-07,9.212381786517855e-08
+5,Prevalence,186,Seychelles,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,1.592208329090132e-07,7.830233106477292e-07,1.1104851142884727e-08
+5,Prevalence,176,Comoros,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,0.000308880296320035,0.0010253650900651896,3.8146839464363105e-05
+5,Prevalence,176,Comoros,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,1.9927587134617154e-06,6.615772231572257e-06,2.460417061393875e-07
+5,Prevalence,122,Ecuador,3,Both,22,All ages,934,Drug-susceptible tuberculosis,2,Percent,2019,0.0006095431924518477,0.0007264126636941123,0.0004946652795380798
+5,Prevalence,122,Ecuador,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,3.172594871437511e-05,9.672196403514399e-05,5.715667018506856e-06
+5,Prevalence,367,Monaco,3,Both,22,All ages,946,Multidrug-resistant tuberculosis without extensive drug resistance,2,Percent,2019,1.7730562421594077e-06,6.2581635690346e-06,2.065130338937218e-07
+5,Prevalence,367,Monaco,3,Both,22,All ages,947,Extensively drug-resistant tuberculosis,2,Percent,2019,2.2292078143986486e-07,7.865952667133992e-07,2.5960927725265823e-08
