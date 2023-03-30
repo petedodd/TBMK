@@ -21,7 +21,7 @@ load(file=gh('{dd}sdata.Rdata'))
 
 
 ## compile stan model
-mdl <- stan_model(file=gh('{zd}combine.stan'))
+## mdl <- stan_model(file=gh('{zd}combine.stan'))
 mdlH <- stan_model(file=gh('{zd}combineH.stan'))
 
 

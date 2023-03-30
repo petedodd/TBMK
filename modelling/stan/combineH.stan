@@ -4,6 +4,9 @@ functions{
   real alo(real logOR, real p){
     return inv_logit(logit(p)+logOR);
   }
+  matrix alom(matrix logOR, matrix p){//overloading only since v2.29
+    return inv_logit(logit(p)+logOR);
+  }
 }
 data{
   int N; //no countries
@@ -46,6 +49,8 @@ parameters{
   vector<lower=0.01,upper=0.999>[2] propAge;
   vector<lower=0,upper=1>[4] prog;
   real<lower=0> lgcfrOR[4];
+  real<lower=0> hivdOR;
+  real<lower=0> hiviOR;
 }
 transformed parameters{
   vector<lower=0>[N] foi;
@@ -60,13 +65,13 @@ transformed parameters{
   matrix<lower=0>[N,4] NoI;
   // //force of infection
   foi = PREV * styblo * 0.5/1e5;
-  propTBMmat = rep_matrix(propTBM',N);
+  propTBMmat = rep_matrix(propTBM',N);// need to apply OR vec to these
   propAgeLong[1] = propAge[1];
   propAgeLong[3] = propAge[2];
   propAgeLong[2] = 1-propAge[1];
   propAgeLong[4] = 1-propAge[2];
   propAmat =  rep_matrix(propAgeLong',N);
-  TBMnotes = propAmat .* propTBMmat .* notif_dataW;
+  TBMnotes = propAmat .* propTBMmat .* notif_dataW * 1.0;//
   tbivec = foi .* (1-(1-BCGprot) * 1e-2 * BCG_coverage);//NOTE
   tbimat = rep_matrix(tbivec,4);
   progmat = rep_matrix(prog',N);
@@ -82,8 +87,10 @@ model{
   propAge ~ lognormal(mu_age,sig_age);//also bad but order less //(-1,0.1)
   //propAge ~ beta(mu_age,sig_age);//NOTE debug
   prog ~ lognormal(mu_prog,sig_prog);
-  //CFR ORs
-  lgcfrOR ~ normal(lgOR,lgORsd);
+  //ORs
+  lgcfrOR ~ normal(lgOR,lgORsd); //CFRs age
+  hivdOR ~  normal(mu_hivd, sig_hivd); //OR for mortality given HIV
+  hiviOR ~ normal(mu_hivi, sig_hivi); //OR for TBM given HIV
   if(couple>0){
       target += lognormal_lpdf( to_vector(NoI) | to_vector(CDR_mu), to_vector(CDR_sg) );
   }
