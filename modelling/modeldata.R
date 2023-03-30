@@ -195,8 +195,11 @@ setkey(hivintb,iso3)
 hivintb <- hivintb[isoz,.(iso3,h.mid,h.sd)]
 hivintb[,lmn:=log(h.mid/sqrt(1+h.sd^2/h.mid^2))]
 hivintb[,lsg:=log(1+h.sd^2/h.mid^2)]
-hivintb[!is.finite(lmn),lmn:=-10]
+hivintb[!is.finite(lmn),lmn:=-5]
 hivintb[!is.finite(lsg),lsg:=0.5]
+hivintb[lsg<1e-3,lsg:=0.1]
+## sdata$hiv_lmn <- hivintb$lmn
+## sdata$hiv_lsg <- hivintb$lsg
 
 
 ## stan data
