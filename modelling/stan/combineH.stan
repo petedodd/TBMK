@@ -67,11 +67,15 @@ transformed parameters{
   matrix<lower=0,upper=1>[N,4] progmat;
   matrix<lower=0>[N,4] NoI;
   matrix<lower=0,upper=1>[N,4] hivmat;//HIV matrix
+  matrix<lower=0,upper=1>[N,4] hivnmat;//HIV matrix
   // //force of infection
   foi = PREV * styblo * 0.5/1e5;
-  propTBMmat0 = rep_matrix(propTBM',N);// HIV -ve
-  propTBMmat1 = alom(hiviOR,propTBMmat0);
-  propTBMmat = propTBMmat0 * (1.0 - hivmat) + propTBMmat1 .* hivmat;
+  propTBMmat0 = rep_matrix(propTBM',N) .* hivnmat;// HIV -ve
+  propTBMmat1 = alom(hiviOR,propTBMmat0) .* hivmat;
+  //propTBMmat = propTBMmat0 .* (1.0 - hivmat) + propTBMmat1 .* hivmat;
+  hivmat = rep_matrix(hivintb,4);
+  hivnmat = rep_matrix(1.0-hivintb,4); //NOTE change 
+  propTBMmat = propTBMmat0 + propTBMmat1;// .* hivnmat;// + propTBMmat0 .* hivmat; 
   propAgeLong[1] = propAge[1];
   propAgeLong[3] = propAge[2];
   propAgeLong[2] = 1-propAge[1];
@@ -81,7 +85,7 @@ transformed parameters{
   tbivec = foi .* (1-(1-BCGprot) * 1e-2 * BCG_coverage);//NOTE
   tbimat = rep_matrix(tbivec,4);
   progmat = rep_matrix(prog',N);
-  hivmat = rep_matrix(hivintb,4);
+
   TBMI = tbimat .* progmat .* POPS;
   // CDR estimate
   NoI = TBMnotes ./ TBMI;

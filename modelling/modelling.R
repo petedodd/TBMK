@@ -28,11 +28,16 @@ mdlH <- stan_model(file=gh('{zd}combineH.stan'))
 ## NOTE vectors and in [0,1]
 ## sample
 sdata$couple <- 1
-smps <- sampling(mdl, data=sdata, chains=4, iter=2000, cores=4)
+## smps <- sampling(mdl, data=sdata, chains=4, iter=2000, cores=4)
 
 smps <- sampling(mdlH, data=sdata, chains=1, iter=1000, cores=1) #test
 
+(tmp <- summary(smps,pars=c('hivintb'))$summary[,'mean'])
 
+summary(tmp)
+
+ sdata$hiv_lmn
+sdata$hiv_lsg
 
 ## NOTE have convergence issues with coupling off
 
