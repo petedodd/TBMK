@@ -125,11 +125,15 @@ generated quantities{
   //calculations
   matrix<lower=0>[N,4] untreated = fdim(TBMI,TBMnotes); //caps over dx
   matrix<lower=0>[N,4] deaths = untreated + TBMnotes .* (CFRtx .* (1.0-hivinTBM) + CFRtxH .* hivinTBM);
+  matrix<lower=0>[N,4] hivdeaths = untreated .* hivinTBM + TBMnotes .* CFRtxH .* hivinTBM;  
   matrix<lower=0>[N,4] morbs = CMRtx .* (1-CFRtx) .* TBMnotes;
   real global_mnotes = sum(TBMnotes);
   real global_minc = sum(TBMI);
   real global_deaths = sum(deaths);
-  real global_morbs = sum(morbs);     
+  real global_morbs = sum(morbs);
+  real global_fracDeathsUntreated = sum(untreated)/global_deaths ;
+  real global_fracHIVInc= sum(TBMI .* hivinTBM)/global_minc; 
+  real global_fracHIVDeaths = sum(hivdeaths)/global_deaths ;      
   //notes
   real regional_AFR_mnotes = sum(TBMnotes[whoregionAFR,1:4]);
   real regional_AMR_mnotes = sum(TBMnotes[whoregionAMR,1:4]);

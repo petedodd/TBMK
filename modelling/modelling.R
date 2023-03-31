@@ -4,9 +4,10 @@ library(ggplot2)
 library(ggthemes)
 library(scales)
 library(data.table)
+library(stringr)
 library(rstan)
 options(mc.cores = 4)
-set.seed(2345)
+
 xd <- 'modelling/plots/'
 dd <- 'modelling/data/'
 id <- 'modelling/indata/'
@@ -14,6 +15,7 @@ zd <- 'modelling/stan/'
 
 gh <- function(x) glue(here(x))
 ssum <- function(x) sqrt(sum(x^2))
+source(gh('modelling/utils.R'))
 
 ## load data for stan
 load(file=gh('{dd}sdata.Rdata'))
@@ -27,16 +29,23 @@ mdlH <- stan_model(file=gh('{zd}combineH.stan'))
 
 ## NOTE vectors and in [0,1]
 ## sample
+set.seed(2345)
 sdata$couple <- 1
-## smps <- sampling(mdl, data=sdata, chains=4, iter=2000, cores=4)
-
+smps <- sampling(mdlH, data=sdata, chains=4, iter=5000, cores=4)
 ## smps <- sampling(mdlH, data=sdata, chains=1, iter=1000, cores=1) #test
 
 ## global
-(A <- summary(smps,pars=c('global_mnotes','global_minc',
-                          'global_deaths','global_morbs'))$summary[,c('mean','sd')])
+A <- summary(smps,pars=c('global_mnotes','global_minc',
+                         'global_deaths','global_morbs',
+                         'global_fracDeathsUntreated',
+                         'global_fracHIVInc','global_fracHIVDeaths'))$summary
 
+A
 
+save(A,file=gh('{xd}A.Rdata'))
+
+round(A[1:4,c('mean','2.5%','97.5%')],-2)
+round(A[5:7,c('mean','2.5%','97.5%')]*100,1)
 
 ## ## NOTE checks
 ## ## foi,tbivec, and prog
@@ -52,6 +61,8 @@ sdata$couple <- 1
 ## (tmp4 <- summary(smps,pars=c('propTBM'))$summary[,'mean'])
 ## summary(tmp4*1e2) # ~ 3% 
 
+
+## TODO ---- need to debug and extend output formatting below
 
 ## regional
 B1 <- summary(smps,pars=c('regional_AFR_mnotes','regional_AMR_mnotes',
@@ -83,15 +94,6 @@ agep <- c('age_u1_minc',
           'age_10to14_morbs'
           )
 ageout <- summary(smps,pars=agep)$summary[,c('mean','sd')]
-
-
-## converter
-mkdt <- function(D){
-  nmz <- rownames(D)
-  D <- as.data.table(D)
-  D[,variable:=nmz]
-  return(D)
-}
 
 ## global/regional table
 A <- mkdt(A)
@@ -168,9 +170,6 @@ load('out.Rdata')
 load(file=gh('{xd}out.Rdata'))
 
 
-library(stringr)
-library(ggthemes)
-library(scales)
 
 out[,unique(variable)]
 
@@ -179,31 +178,12 @@ outr <- out[grepl(",",variable)]
 
 test <- head(outr$variable)
 
-getcno <- function(x){
-  a <- str_extract(x,"\\[(.*?),")
-  a <- gsub('\\[','',a)
-  a <- gsub(',','',a)
-  as.integer(a)
-}
-
-getAno <- function(x){
-  a <- str_extract(x,",(.*?)\\]")
-  a <- gsub('\\]','',a)
-  a <- gsub(',','',a)
-  as.integer(a)
-}
-
+## test utils functions
 getcno(test)
 getAno(test)
-
-acts <- c('<1','1-4','5-9','10-14')
-isoz <- scan(gh('{dd}isoz.txt'),what='char')
-
-getcn <- function(x) isoz[getcno(x)]
-getac <- function(x) acts[getAno(x)]
-
 getcn(test)
 getac(test)
+
 
 outr[,iso3:=getcn(variable)]
 outr[,acat:=getac(variable)]
@@ -287,30 +267,6 @@ ggsave(gh('{xd}f4.png'),w=5,h=6)
 
 
 ## table functions
-
-## always round 0.5 up
-round2 <- function(x, digits = 0) sign(x) * trunc(abs(x) * 10^digits + 0.5) / 10^digits
-ft <- Vectorize(function(x){
-  smallpos <- x > 0 & x < 0.01
-  one2ten <- x >= 1 & x < 10
-  zero2one <- x >= 0.1 & x < 1
-  dg <- ifelse(abs(x) > 0.01 & abs(x) < 100, 2, 3)
-  x2 <- signif(x, dg)
-  trailing.0 <- x2 == round2(x) & one2ten == TRUE
-  trailing0 <- x2 * 10 == round2(x * 10) & zero2one == TRUE & x2 < 1
-  format(
-    x2,
-    digits = dg,
-    nsmall = 0L,
-    big.mark = " ",
-    justify = 'right',
-    drop0trailing = TRUE,
-    scientific = FALSE
-  )
-})
-brkt <- function(x,y) paste0(ft(pmax(0,x)),' (',
-                             ft(pmax(0,x-1.96*y)),' to ',
-                             ft(pmax(0,x+1.96*y)),')')
 
 ## TODO redo with samples?
 ## looking at tables
