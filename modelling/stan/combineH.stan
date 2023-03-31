@@ -59,23 +59,20 @@ transformed parameters{
   matrix<lower=0>[N,4] tbimat;
   vector<lower=0,upper=1>[4] propAgeLong;
   matrix<lower=0,upper=1>[N,4] propAmat;
-  matrix<lower=0,upper=1>[N,4] propTBMmat;
-  matrix<lower=0,upper=1>[N,4] propTBMmat0;
-  matrix<lower=0,upper=1>[N,4] propTBMmat1;  
+  matrix[N,4] propTBMmat;
+  matrix[N,4] propTBMmat0;
+  matrix[N,4] propTBMmat1;  
   matrix<lower=0>[N,4] TBMnotes;
   matrix<lower=0>[N,4] TBMI;
   matrix<lower=0,upper=1>[N,4] progmat;
   matrix<lower=0>[N,4] NoI;
-  matrix<lower=0,upper=1>[N,4] hivmat;//HIV matrix
-  matrix<lower=0,upper=1>[N,4] hivnmat;//HIV matrix
+  matrix[N,4] hivmat;//HIV matrix
+  hivmat = rep_matrix(hivintb,4);
   // //force of infection
   foi = PREV * styblo * 0.5/1e5;
-  propTBMmat0 = rep_matrix(propTBM',N) .* hivnmat;// HIV -ve
-  propTBMmat1 = alom(hiviOR,propTBMmat0) .* hivmat;
-  //propTBMmat = propTBMmat0 .* (1.0 - hivmat) + propTBMmat1 .* hivmat;
-  hivmat = rep_matrix(hivintb,4);
-  hivnmat = rep_matrix(1.0-hivintb,4); //NOTE change 
-  propTBMmat = propTBMmat0 + propTBMmat1;// .* hivnmat;// + propTBMmat0 .* hivmat; 
+  propTBMmat0 = rep_matrix(propTBM',N);// .* hivnmat;// HIV -ve
+  propTBMmat1 = alom(hiviOR,propTBMmat0);// .* hivmat;
+  propTBMmat = propTBMmat0 .* (1.0 - hivmat) + propTBMmat1 .* hivmat;
   propAgeLong[1] = propAge[1];
   propAgeLong[3] = propAge[2];
   propAgeLong[2] = 1-propAge[1];
@@ -85,7 +82,6 @@ transformed parameters{
   tbivec = foi .* (1-(1-BCGprot) * 1e-2 * BCG_coverage);//NOTE
   tbimat = rep_matrix(tbivec,4);
   progmat = rep_matrix(prog',N);
-
   TBMI = tbimat .* progmat .* POPS;
   // CDR estimate
   NoI = TBMnotes ./ TBMI;
@@ -108,15 +104,17 @@ model{
   }
 }
 generated quantities{
+  matrix<lower=0,upper=1>[N,4] hivinTBM =  propTBMmat1 .* hivmat ./ propTBMmat;//HIV prev in TBM
  //reformed CFRs
-  real CFRtxR[4] = beta_rng(CFRtxA,CFRtxB);
+  real CFRtxR[4] = beta_rng(CFRtxA,CFRtxB); //CFR treated
   real CFRtxRadj[4] = {alo(lgcfrOR[1],CFRtxR[1]),
     alo(lgcfrOR[2],CFRtxR[2]),
     alo(lgcfrOR[3],CFRtxR[3]),
     alo(lgcfrOR[4],CFRtxR[4])}; //adjusted by ORs
   row_vector[4] CFRtxV = to_row_vector(CFRtxRadj);
-  matrix[N,4] CFRtx = rep_matrix(CFRtxV,N);
-  //reformed CMRs
+  matrix[N,4] CFRtx = rep_matrix(CFRtxV,N); //matrix tx CFR
+  matrix[N,4] CFRtxH = alom(hivdOR,CFRtx); //matrix tx CFR for HIV
+  //reformed CMRs - morbidity
   real CMRtxR[4] = beta_rng(seqA,seqB);
   real CMRtxRadj[4] = {alo(lgcfrOR[1],CMRtxR[1]),
     alo(lgcfrOR[2],CMRtxR[2]),
@@ -126,7 +124,7 @@ generated quantities{
   matrix[N,4] CMRtx = rep_matrix(CMRtxV,N);
   //calculations
   matrix<lower=0>[N,4] untreated = fdim(TBMI,TBMnotes); //caps over dx
-  matrix<lower=0>[N,4] deaths = CFRtx .* TBMnotes + untreated;
+  matrix<lower=0>[N,4] deaths = untreated + TBMnotes .* (CFRtx .* (1.0-hivinTBM) + CFRtxH .* hivinTBM);
   matrix<lower=0>[N,4] morbs = CMRtx .* (1-CFRtx) .* TBMnotes;
   real global_mnotes = sum(TBMnotes);
   real global_minc = sum(TBMI);
