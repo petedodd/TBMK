@@ -412,7 +412,7 @@ GP <- ggplot(CF[,.(iso3,hivk,hiva)],
   ggrepel::geom_text_repel()+
   scale_x_continuous(label = percent)+xlab('HIV in TB (all ages)')+
   scale_y_continuous(label = percent)+ylab('HIV in TB (0-14 years)')+
-  annotate(geom='text',label=glue('slope = {txt}'),col='blue',x=0.3,y=0.3,size=7)+
+  annotate(geom='text',label=glue('slope = 1/{txt}'),col='blue',x=0.3,y=0.3,size=7)+
   ggtitle('2015: Child estimates from mortality paper vs WHO all TB estimates')
 
 ggsave(GP,file=gh('{xd}KidHIV.png'),w=7,h=7)
