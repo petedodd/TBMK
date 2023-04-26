@@ -569,6 +569,23 @@ GP
 
 ggsave(GP,file=gh('{xd}deathsZAFaggrMA_noUnk.png'),w=10,h=6)
 
+
+
+GP <- ggplot(Zb[hiv2=='HIV-'],aes(acat,TBMdeaths/TBM,size=TBM))+
+  geom_point(shape=1)+
+  facet_wrap(~hiv2)+theme_light()+
+  geom_pointrange(data=CFR[hiv2=='HIV-'],size=1,
+                  aes(x=acat,y=transf.ilogit(lgte),
+                      ymin=transf.ilogit(lgte-2*lgt.se),
+                      ymax=transf.ilogit(lgte+2*lgt.se)))+
+  scale_y_continuous(label=percent)+
+  xlab('Age category') + ylab('Case fatality ratio')
+
+GP
+
+ggsave(GP,file=gh('{xd}deathsZAFaggrMA_noUnknoHIV.png'),w=6,h=6)
+
+
 ## NOTE use age pattern to match with Silvia review
 silv <- c(19.3,14,26.1)
 diff(silv[-1])/silv[1]/3.92
