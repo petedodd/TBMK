@@ -345,8 +345,7 @@ rtmp <- rbeta(1e4,tmp$a,tmp$b)
 summary(rtmp)
 ## hist(rtmp)
 sdata$seqA <- rep(tmp$a,4)
-sdata$seqB <- rep(tmp$a,4)
-
+sdata$seqB <- rep(tmp$b,4)
 
 ## wide notif data
 sdata$notif_dataW <- cbind(sdata$notif_data[,c(1,1)],sdata$notif_data[,c(2,2)])
