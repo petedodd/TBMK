@@ -372,6 +372,82 @@ sdata$sig_hivd <- sg
 
 save(sdata,file=gh('{dd}sdata.Rdata'))
 
-## TODO
-## consider beta?
-## tidy
+
+## outputting mean/IQR for select parms
+fr <- function(x,dp=2)format(round(x,dp),nsmall=dp)
+
+tabgen <- function(x,y,z,dp=1,pc=FALSE){
+  if(z=='beta'){
+    ansm <- x/(x+y)
+    ans.lo <- qbeta(0.25,x,y)
+    ans.hi <- qbeta(0.75,x,y)
+  } else {
+    ansm <- exp(x + y^2/2)
+    ans.lo <- qlnorm(0.25,x,y)
+    ans.hi <- qlnorm(0.75,x,y)
+  }
+  ## list(ansm,ans.lo,ans.hi)
+  if(!pc)
+    paste0(fr(ansm,dp),' (',fr(ans.lo,dp),'-',fr(ans.hi,dp),')')
+  else
+    paste0(fr(1e2*ansm,1),'% (',fr(1e2*ans.lo,1),'%-',fr(1e2*ans.hi,1),'%)')
+}
+
+
+## make table
+tabiqr <- list()
+## styblo
+tabiqr[['styblo']] <- data.table(
+  variable='styblo',
+  miqr=tabgen( sdata$mu_styblo, sdata$sig_styblo,'LN',pc=FALSE)
+)
+## BCG prot
+tabiqr[['bcg']] <- data.table(
+  variable='BCG prot',
+  miqr=tabgen(sdata$bcgProtA,sdata$bcgProtB,'beta',pc=TRUE)
+)
+## CFR
+tabiqr[['CFR']] <- data.table(
+  variable='CFR',
+  miqr=tabgen(sdata$CFRtxA[1],sdata$CFRtxB[1],'beta',pc=TRUE)
+)
+## TBM sequelae
+tabiqr[['seq']] <- data.table(
+  variable='sequel',
+  miqr=tabgen( sdata$seqA[1], sdata$seqB[1],'beta',pc=TRUE)
+)
+## Notification age split
+tabiqr[['note']] <- data.table(
+  variable='note split',
+  miqr=tabgen( sdata$mu_age, sdata$sig_age,'LN',pc=TRUE)
+)
+## TBM risk
+tabiqr[['risk']] <- data.table(
+  variable='risk',
+  miqr=tabgen( sdata$mu_prog, sdata$sig_prog,'LN',pc=TRUE)
+)
+## HIV progression OR
+tabiqr[['HIVprog']] <- data.table(
+  variable='HIV prog OR',
+  miqr=tabgen( sdata$mu_hivi, sdata$sig_hivi,'LN')
+)
+## Proportion of TB notifications TBM
+tabiqr[['propn']] <- data.table(
+  variable='prop notes',
+  miqr=tabgen( sdata$mu_notes, sdata$sig_notes,'LN',pc=TRUE)
+)
+## HIV CFR OR
+tabiqr[['HIVd']] <- data.table(
+  variable='HIV OR CFR',
+  miqr=tabgen( sdata$mu_hivd, sdata$sig_hivd,'LN')
+)
+## CFR OR age
+tabiqr[['noteCFR']] <- data.table(
+  variable='OR CFR age',
+  miqr=tabgen( sdata$lgOR, sdata$lgORsd,'LN')
+)
+tabiqr <- rbindlist(tabiqr)
+tabiqr
+
+fwrite(tabiqr,file=gh('{dd}sdatasmy.csv'))
+
