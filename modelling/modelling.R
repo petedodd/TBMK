@@ -2,6 +2,7 @@ library(here)
 library(glue)
 library(ggplot2)
 library(ggthemes)
+library(ggpubr)
 library(scales)
 library(data.table)
 library(stringr)
@@ -43,6 +44,12 @@ A <- summary(smps,pars=c('global_mnotes','global_minc',
 A
 
 save(A,file=gh('{xd}A.Rdata'))
+
+H <- summary(smps,pars=c('regional_fracHIVinc','regional_fracHIVmort',
+                         'global_fracHIVincAge','global_fracHIVmortAge'))$summary
+
+save(H,file=gh('{xd}H.Rdata'))
+
 
 round(A[1:4,c('mean','2.5%','97.5%')],-2)
 round(A[5:7,c('mean','2.5%','97.5%')]*100,1)
@@ -164,14 +171,15 @@ summary(tbmp)
 
 
 ## ============ neater outputs
-
-load('out.Rdata')
-
 load(file=gh('{xd}out.Rdata'))
 
-
-
 out[,unique(variable)]
+load(file=gh('{xd}A.Rdata'))
+
+A
+
+load(file=gh('{xd}H.Rdata'))
+
 
 ## keep only those with a comma
 outr <- out[grepl(",",variable)]
@@ -194,8 +202,8 @@ dropbrkts <- function(x) gsub("\\[(.*?)\\]","",x)
 outr[,variable:=dropbrkts(variable)]
 outr[,unique(variable)]
 
-outr <- outr[variable %in% c('deaths','untreated','TBMI','TBMnotes')]
 outr2 <- outr[variable %in% c('deaths','untreated','TBMI','TBMnotes','morbs')]
+outr <- outr[variable %in% c('deaths','untreated','TBMI','TBMnotes')]
 
 
 ## f1 - inc by age, col= tx status
@@ -275,6 +283,7 @@ outr2 <- outr2[,.(mean,sd,variable,iso3,acat)]
 save(outr2,file=gh('{xd}outr2.Rdata'))
 
 load(file=gh('{xd}outr2.Rdata'))
+
 
 
 tmp <- dcast(outr2,iso3 + acat ~ variable,value.var = c('mean','sd'))
@@ -424,6 +433,83 @@ GG <- ggplot(btmp,
 
 ggsave(GG,file=gh('{xd}MG.png'),w=12,h=7)
 
+## === new version of MG with HIV
+brktonly <- function(x) as.numeric(gsub("\\]","",gsub("^.+\\[","",x)))
+
+H <- data.table(variable=rownames(H),value=H[,'mean'])
+H[,qty:=ifelse(grepl('mort',H$variable),'mort','inc')]
+H[,acat:=getac(variable)]
+H[is.na(acat),acat:=acts[brktonly(variable)]]
+whorg <- c("AFR", "AMR", "EMR", "EUR", "SEA", "WPR")
+H[,g.whoregion:=whorg[getcno(variable)]]
+H[is.na(g.whoregion),g.whoregion:='GLOBAL']
+H[,variable:=NULL]
+tmp <- H[qty=='inc']
+tmp[,qty:='morb']
+H <- rbind(H,tmp)
+
+## global
+htmp <- merge(btmp,H,by=c('qty','acat','g.whoregion'),all.x=TRUE)
+htmp[,`HIV-infected`:=value*mid]
+htmp[,`HIV-uninfected`:=(1-value)*mid]
+htmp[,c('value','g.whoregion','mid'):=NULL]
+htmp[,c('qty','s','txstatus'):=NULL]
+htmp <- melt(htmp,id=c('QTY','TX','acat','Region'))
+htmp[,combo:=paste0(variable,', ',TX)]
+hlvs <- c(
+  "HIV-infected, untreated for tuberculosis",
+  "HIV-uninfected, untreated for tuberculosis",
+  "HIV-infected, treated for tuberculosis",
+  "HIV-uninfected, treated for tuberculosis"
+)
+htmp$combo <- factor(htmp$combo,levels=hlvs,ordered=TRUE)
+htmp$acat <- factor(htmp$acat,levels=acts,ordered=TRUE)
+str(htmp)
 
 
+GG <- ggplot(htmp,
+             aes(acat,value,fill=combo)) +
+  geom_bar(stat='identity')+
+  facet_grid(QTY~Region)+
+  scale_fill_colorblind(name=element_blank())+
+  scale_y_continuous(label=comma)+
+  ylab('Number in 2019')+
+  xlab('Age category (years)')+
+  theme_light()+
+  theme(legend.position = 'top')
+GG
 
+ggsave(GG,file=gh('{xd}MGH.png'),w=12,h=7)
+
+## Two piece version
+
+GGR <- ggplot(htmp[Region!='GLOBAL'],
+             aes(acat,value,fill=combo)) +
+  geom_bar(stat='identity')+
+  facet_grid(QTY~Region)+
+  scale_fill_colorblind(name=element_blank())+
+  scale_y_continuous(label=comma)+
+  ylab('')+
+  xlab('Age category (years)')+
+  theme_light()+
+  theme(legend.position = 'top',axis.title.x = element_text(hjust=0.4))
+## GGR
+GGG <- ggplot(htmp[Region=='GLOBAL'],
+              aes(acat,value,fill=combo)) +
+  geom_bar(stat='identity')+
+  facet_grid(QTY~Region,switch='y')+
+  scale_fill_colorblind(name=element_blank())+
+  scale_y_continuous(label=comma)+
+  ylab('Number in 2019')+
+  xlab('')+
+  theme_light()+
+  theme(legend.position = 'top')
+## GGG
+w <- 1
+GGG <- GGG + theme(legend.spacing.x = unit(w, 'cm'))
+GGR <- GGR + theme(legend.spacing.x = unit(w, 'cm'))
+
+GG <- ggarrange(GGG,GGR,
+                widths=c(0.25,1),
+                common.legend = TRUE)
+ggsave(GG,file=gh('{xd}MGHS.png'),w=14,h=10)
