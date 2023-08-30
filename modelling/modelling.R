@@ -172,12 +172,9 @@ summary(tbmp)
 
 ## ============ neater outputs
 load(file=gh('{xd}out.Rdata'))
-
-out[,unique(variable)]
+## out[,unique(variable)]
 load(file=gh('{xd}A.Rdata'))
-
-A
-
+## A
 load(file=gh('{xd}H.Rdata'))
 
 
@@ -448,6 +445,8 @@ tmp <- H[qty=='inc']
 tmp[,qty:='morb']
 H <- rbind(H,tmp)
 
+btmp[Region=='GLOBAL'][,sum(mid),by=qty] #check
+
 ## global
 htmp <- merge(btmp,H,by=c('qty','acat','g.whoregion'),all.x=TRUE)
 htmp[,`HIV-infected`:=value*mid]
@@ -465,6 +464,8 @@ hlvs <- c(
 htmp$combo <- factor(htmp$combo,levels=hlvs,ordered=TRUE)
 htmp$acat <- factor(htmp$acat,levels=acts,ordered=TRUE)
 str(htmp)
+
+htmp[Region=='GLOBAL'][,sum(value),by=QTY] #check
 
 
 GG <- ggplot(htmp,
