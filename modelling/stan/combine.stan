@@ -75,7 +75,7 @@ model{
   PREV ~ lognormal(PREVmu,PREVsg);
   styblo ~ lognormal(mu_styblo,sig_styblo);
   BCGprot ~ beta(bcgProtA,bcgProtB);
-  propTBM ~ lognormal(mu_notes,sig_notes);//BUG here?(-2,0.1);//
+  propTBM ~ lognormal(mu_notes,sig_notes);//
   propAge ~ lognormal(mu_age,sig_age);//also bad but order less //(-1,0.1)
   //propAge ~ beta(mu_age,sig_age);//NOTE debug
   prog ~ lognormal(mu_prog,sig_prog);

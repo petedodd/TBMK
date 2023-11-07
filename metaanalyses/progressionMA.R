@@ -122,6 +122,10 @@ GP <- ggplot(P,aes(age.mid,mid,
 
 GP
 
+## Note save for composition
+Fig.A <- GP
+save(Fig.A,file=gh('{xd}Fig.A.Rdata'))
+
 ggsave(GP,file=gh('{xd}progression_withWallgren.png'),w=6,h=4)
 
 

@@ -91,7 +91,7 @@ model{
   hivintb ~ lognormal(hiv_lmn,hiv_lsg);
   styblo ~ lognormal(mu_styblo,sig_styblo);
   BCGprot ~ beta(bcgProtA,bcgProtB);
-  propTBM ~ lognormal(mu_notes,sig_notes);//BUG here?(-2,0.1);//
+  propTBM ~ lognormal(mu_notes,sig_notes);//
   propAge ~ lognormal(mu_age,sig_age);//also bad but order less //(-1,0.1)
   //propAge ~ beta(mu_age,sig_age);//NOTE debug
   prog ~ lognormal(mu_prog,sig_prog);
@@ -130,7 +130,7 @@ generated quantities{
   matrix<lower=0>[N,4] deaths = untreated + TBMnotes .* (CFRtx .* (1.0-hivinTBM) + CFRtxH .* hivinTBM);
   matrix<lower=0>[N,4] hivinc = TBMI .* hivinTBM;
   matrix<lower=0>[N,4] hivdeaths = untreated .* hivinTBM + TBMnotes .* CFRtxH .* hivinTBM;
-  matrix<lower=0>[N,4] morbs = CMRtx .* (1-CFRtx) .* TBMnotes;
+  matrix<lower=0>[N,4] morbs = CMRtx .* (1-CFRtx .* (1.0-hivinTBM) + CFRtxH .* hivinTBM) .* TBMnotes;
   real global_mnotes = sum(TBMnotes);
   real global_minc = sum(TBMI);
   real global_deaths = sum(deaths);

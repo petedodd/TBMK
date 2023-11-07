@@ -44,6 +44,7 @@ A <- summary(smps,pars=c('global_mnotes','global_minc',
 A
 
 save(A,file=gh('{xd}A.Rdata'))
+write.csv(A,file=gh('{xd}A.csv'))
 
 H <- summary(smps,pars=c('regional_fracHIVinc','regional_fracHIVmort',
                          'global_fracHIVincAge','global_fracHIVmortAge'))$summary
@@ -67,9 +68,6 @@ round(A[5:7,c('mean','2.5%','97.5%')]*100,1)
 ## sum(sdata$POPS)/1e9 #2 billion
 ## (tmp4 <- summary(smps,pars=c('propTBM'))$summary[,'mean'])
 ## summary(tmp4*1e2) # ~ 3% 
-
-
-## TODO ---- need to debug and extend output formatting below
 
 ## regional
 B1 <- summary(smps,pars=c('regional_AFR_mnotes','regional_AMR_mnotes',
@@ -161,7 +159,7 @@ save(out,file=gh('{xd}out.Rdata'))
 notes <- out[grepl('TBMnotes',variable)]
 incs <- out[grepl('TBMI\\[',variable)]
 incpcs <- out[grepl('TBMIpc',variable)]
-cdr <- out[grepl('NoI',variable)] #TODO CHECK
+cdr <- out[grepl('NoI',variable)]
 tbmp <- out[grepl('propTBM',variable)]
 
 ## NOTE check ball park with means
@@ -272,8 +270,6 @@ ggsave(gh('{xd}f4.png'),w=5,h=6)
 
 
 ## table functions
-
-## TODO redo with samples?
 ## looking at tables
 outr2 <- outr2[,.(mean,sd,variable,iso3,acat)]
 
@@ -325,7 +321,7 @@ rkey <- unique(tb[,.(iso3,g.whoregion=g_whoregion)])
 
 tmp <- merge(tmp,rkey,by='iso3',all.x=TRUE)
 
-## BUG
+
 ## global
 gtots <- tmp[,.(mid=sum(mean),s=ssum(sd)),by=.(acat,qty,txstatus)]
 gtota <- gtots[,.(mid=sum(mid),s=ssum(s)),by=.(qty,txstatus)]

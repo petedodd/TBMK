@@ -326,6 +326,9 @@ GP <- ggplot(B,aes(col=source,shape=type))+
   scale_y_continuous(label=percent)+
   theme_bw()
 GP
+## NOTE save out for combination
+Fig.B <- GP
+save(Fig.B,file=gh('{xd}Fig.B.Rdata'))
 
 ggsave(GP,file=gh('{xd}CombineMA_Age_percent.png'),w=10,h=6)
 
@@ -566,6 +569,9 @@ GP <- ggplot(Zb[hiv2!='HIV unknown'],aes(acat,TBMdeaths/TBM,size=TBM))+
 
 
 GP
+## NOTE save out for combination
+Fig.C <- GP
+save(Fig.C,file=gh('{xd}Fig.C.Rdata'))
 
 ggsave(GP,file=gh('{xd}deathsZAFaggrMA_noUnk.png'),w=10,h=6)
 
