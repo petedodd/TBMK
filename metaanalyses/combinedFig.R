@@ -26,3 +26,4 @@ Fig.C <- Fig.C + theme_classic() + ggpubr::grids() +
 ## combine & save
 GP <- ggarrange(Fig.A,Fig.B,Fig.C,ncol=1,labels=c('A','B','C'))
 ggsave(GP,file=gh('{xd}Fig.ALL.pdf'),w=7,h=15)
+ggsave(GP,file=gh('{xd}Fig.ALL.png'),w=7,h=15)
