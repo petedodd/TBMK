@@ -429,26 +429,28 @@ ggsave(GG,file=gh('{xd}MG.png'),w=12,h=7)
 ## === new version of MG with HIV
 brktonly <- function(x) as.numeric(gsub("\\]","",gsub("^.+\\[","",x)))
 
-H <- data.table(variable=rownames(H),value=H[,'mean'])
-H[,qty:=ifelse(grepl('mort',H$variable),'mort','inc')]
-H[,acat:=getac(variable)]
-H[is.na(acat),acat:=acts[brktonly(variable)]]
+HD <- mkdt(H)
+HD[,qty:=ifelse(grepl('mort',HD$variable),'mort','inc')]
+HD[,acat:=getac(variable)]
+HD[is.na(acat),acat:=acts[brktonly(variable)]]
 whorg <- c("AFR", "AMR", "EMR", "EUR", "SEA", "WPR")
-H[,g.whoregion:=whorg[getcno(variable)]]
-H[is.na(g.whoregion),g.whoregion:='GLOBAL']
-H[,variable:=NULL]
-tmp <- H[qty=='inc']
+HD[,g.whoregion:=whorg[getcno(variable)]]
+HD[is.na(g.whoregion),g.whoregion:='GLOBAL']
+HD[,variable:=NULL]
+tmp <- HD[qty=='inc']
 tmp[,qty:='morb']
-H <- rbind(H,tmp)
+HD <- rbind(HD,tmp)
+H <- HD[,.(g.whoregion,acat,qty,value=mean,S=sd)]
 
 btmp[Region=='GLOBAL'][,sum(mid),by=qty] #check
 
 ## global
 htmp <- merge(btmp,H,by=c('qty','acat','g.whoregion'),all.x=TRUE)
+## NOTE HIV uncertainty much smaller so neglect
 htmp[,`HIV-infected`:=value*mid]
 htmp[,`HIV-uninfected`:=(1-value)*mid]
 htmp[,c('value','g.whoregion','mid'):=NULL]
-htmp[,c('qty','s','txstatus'):=NULL]
+htmp[,c('qty','s','txstatus','S'):=NULL]
 htmp <- melt(htmp,id=c('QTY','TX','acat','Region'))
 htmp[,combo:=paste0(variable,', ',TX)]
 hlvs <- c(
@@ -510,3 +512,61 @@ GG <- ggarrange(GGG,GGR,
                 widths=c(0.25,1),
                 common.legend = TRUE)
 ggsave(GG,file=gh('{xd}MGHS.png'),w=14,h=10)
+
+
+
+## ================= supplemental tables ===========
+htmp <- merge(btmp,H,by=c('qty','acat','g.whoregion'),all.x=TRUE)
+## NOTE HIV uncertainty much smaller so neglect
+htmp[,`HIV-infected`:=value*mid]
+htmp[,`HIV-uninfected`:=(1-value)*mid]
+htmp[,`Total`:=mid]
+htmp[,his:= s * sqrt(value)]
+htmp[,hus:= s * sqrt(1-value)]
+htmp[,c('value','mid'):=NULL]
+htmp[,c('qty','txstatus','S'):=NULL]
+htmp[,g.whoregion:=NULL]
+
+## make the no age but regional table:
+noage <- htmp[,.(Total=sum(Total),
+                 `HIV-infected`=sum(`HIV-infected`),`HIV-uninfected`=sum(`HIV-uninfected`),
+                 s=ssum(s),his=ssum(his),hus=ssum(hus)
+                 ),by=.(Region,QTY,TX)]
+
+noagetab <- noage[,.(QTY,Region,TX,
+                    `HIV-uninfected`=brkt(`HIV-uninfected`,hus),
+                    `HIV-infected`=brkt(`HIV-infected`,his),
+                    Total=brkt(Total,s)
+                    )]
+
+tmp <- melt(noagetab,id=c('QTY','Region','TX'))
+noagetab <- dcast(tmp,QTY + TX + variable ~ Region,value.var='value')
+names(noagetab)[names(noagetab)=='variable'] <- 'HIV'
+
+## save:
+fwrite(noagetab,file=gh('{xd}noagetab.csv'))
+
+## make the age but no region table
+noreg <- htmp[Region != 'GLOBAL',
+              .(Total=sum(Total),
+                `HIV-infected`=sum(`HIV-infected`),`HIV-uninfected`=sum(`HIV-uninfected`),
+                s=ssum(s),his=ssum(his),hus=ssum(hus)
+                ),by=.(AGE=acat,QTY,TX)]
+
+noregtab <- noreg[,.(QTY,AGE,TX,
+                     `HIV-uninfected`=brkt(`HIV-uninfected`,hus),
+                     `HIV-infected`=brkt(`HIV-infected`,his),
+                     Total=brkt(Total,s)
+                     )]
+
+
+tmp <- melt(noregtab,id=c('QTY','AGE','TX'))
+noregtab <- dcast(tmp,QTY + TX + variable ~ AGE,value.var='value')
+
+names(noregtab)[names(noregtab)=='variable'] <- 'HIV'
+
+noregtab <- noregtab[order(QTY,TX,HIV),.(QTY,TX,HIV,`<1`,`1-4`,`5-9`,`10-14`)]
+
+## save:
+fwrite(noregtab,file=gh('{xd}noregtab.csv'))
+
