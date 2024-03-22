@@ -512,6 +512,7 @@ GG <- ggarrange(GGG,GGR,
                 widths=c(0.25,1),
                 common.legend = TRUE)
 ggsave(GG,file=gh('{xd}MGHS.png'),w=14,h=10)
+ggsave(GG, file = gh("{xd}MGHS.pdf"), w = 14, h = 10)
 
 
 
