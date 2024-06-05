@@ -98,6 +98,7 @@ PP[,c('age.lo','age.hi','Paper','Paper2','Paper3'):=NA]
 PP[,c('mid','lo','hi'):=.(exp(pred),exp(ci.lb),exp(ci.ub))]
 PP[,c('lo2','hi2'):=.(exp(pi.lb),exp(pi.ub))]
 
+brks <- c(0,1,5,10,15)
 
 ## graph
 GP <- ggplot(P,aes(age.mid,mid,
@@ -111,7 +112,7 @@ GP <- ggplot(P,aes(age.mid,mid,
   geom_pointrange()+geom_errorbarh(height=0)+
   geom_point()+
   scale_y_sqrt(label=scales::percent,limits=c(0,0.6))+
-  scale_x_sqrt()+
+  scale_x_sqrt(breaks=brks,labels=brks)+
   theme_classic()+ggpubr::grids()+
   xlab('Age (years, square root scale)') +
   ylab('TBM risk (square root scale)')+
@@ -196,7 +197,7 @@ GP <- ggplot(P,aes(age.mid,mid,
   geom_pointrange()+geom_errorbarh(height=0)+
   geom_point()+
   scale_y_sqrt(label=scales::percent,limits=c(0,0.6))+
-  scale_x_sqrt()+
+  scale_x_sqrt(breaks=brks,labels=brks)+
   theme_classic()+ggpubr::grids()+
   xlab('Age (years, square root scale)') +
   ylab('TBM risk (square root scale)')+
