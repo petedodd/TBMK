@@ -62,7 +62,11 @@ GP <- ggplot(P,aes(age.mid,mid,
 
 GP
 
-GP+scale_y_sqrt() + scale_x_sqrt()
+eg1 <- GP + scale_y_log10() + theme(legend.position = "none")+geom_smooth(method='lm',aes(shape=NULL,col=NULL))
+eg2 <- GP + scale_y_log10() + scale_x_sqrt()  + theme(legend.position = "none")+geom_smooth(method='lm',aes(shape=NULL,col=NULL))
+
+exx <- ggpubr::ggarrange(eg1,eg2,labels=c('A','B'))
+ggsave(exx,file=gh('{xd}ScaleCheck.png'),w=6,h=4)
 
 ## sqrt v sqrt to look like quadratic:
 ## sqrt_p = C + B*sqrt_a + A*a
