@@ -283,6 +283,9 @@ B$acat <- factor(B$acat,levels=c('<1','1-4','5-9','10-14'),ordered = TRUE)
 
 ## meta-analysis
 ma <- rma(data=B,yi=lgte,sei=lgt.se,mods = ~acat-1)
+## I^2 (residual heterogeneity / unaccounted variability): 96.20%
+## H^2 (unaccounted variability / sampling variability):   26.31
+
 
 ## prediction
 BS <- as.data.table(predict(ma))
@@ -374,6 +377,7 @@ HD$hiv <- factor(HD$hiv,levels=c('HIV-','HIV+'),ordered=TRUE)
 summary(HD) #check
 
 save(HD,file=gh('{td}HD.Rdata'))
+## load(file=gh('{td}HD.Rdata'))
 
 
 GP <- ggplot(HD,aes(age,TBM/TB,size=TB,col=hiv))+
@@ -415,6 +419,10 @@ HOR <- HDW[iso3=='ZAF',.(TBMp=sum(`TBM_HIV+`),TBMn=sum(`TBM_HIV-`),
 ## compute odds ratios 2 ways
 res <- rma(measure="OR", ai=TBMp, n1i=TBp, ci=TBMn, n2i=TBn, data=HOR, drop00=TRUE)
 print(res, digits=3)
+## I^2 (total heterogeneity / total variability):   43.19%
+## H^2 (total variability / sampling variability):  1.76
+
+
 
 ## ## https://www.metafor-project.org/doku.php/analyses:stijnen2010#hypergeometric-normal_model_for_the_meta-analysis_of_odds_ratios
 ## res <- rma.glmm(measure="OR", ai=TBMp, n1i=TBp, ci=TBMn, n2i=TBn, data=HOR, model="CM.EL") #

@@ -85,6 +85,9 @@ A <- rma.glmm(measure = "PLO",
               slab=Paper)
 
 summary(A)
+## I^2 (residual heterogeneity / unaccounted variability): 97.64%
+## H^2 (unaccounted variability / sampling variability):   42.31
+
 GP+scale_y_sqrt() + scale_x_sqrt()
 cz <- coef(A)
 
