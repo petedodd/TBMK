@@ -362,7 +362,7 @@ zaf[,sum(TB),by=hiv]  #63693
 akey <- data.table(age=c(acts[1],rep(acts[2],4),rep(acts[3],5),rep(acts[4],5)),
                    agey=0:14)
 
-## look at raw and then OR jj
+## look at raw and then OR
 H1 <- zaf[hiv!='HIV unknown']
 H1 <- merge(H1,akey[,.(age=agey,acat=age)],by = 'age')
 H1 <- H1[,.(TB=sum(TB),TBM=sum(TBM),iso3='ZAF'),by=.(year,age=acat,hiv)]
@@ -499,6 +499,9 @@ HIVdOR <- as.data.table(predict(res, transf=exp))
 save(HIVdOR,file=gh('{xd}HIVdOR.Rdata'))
 fwrite(HIVdOR,file=gh('{xd}HIVdOR.csv'))
 
+## heterogeneity results
+orhetlist <- list(I2=res$I2,H2=res$H2,tau2=res$tau2)
+save(orhetlist,file=gh('{xd}orhetlist.Rdata'))
 
 ## ---- HIV-ve
 Zbf <- merge(Zd[,.(year,age,sex,hiv2,TBMdeaths)],
@@ -551,7 +554,9 @@ for(i in 1:length(F)){
   CFR[[i]] <- list(qty=names(F)[i],
                  lgte=coef(F[[i]]),
                  lgt.se=F[[i]]$se,
-                 tau2=F[[i]]$tau2)
+                 tau2=F[[i]]$tau2,
+                 H2=F[[i]]$H2,
+                 I2=F[[i]]$I2)
 }
 CFR <- rbindlist(CFR)
 

@@ -1,3 +1,8 @@
+# exclude ZAF data
+metaanalyses/data/ZAF/cases.csv
+metaanalyses/data/ZAF/deaths.csv
+
+# mac users
 .DS_Store
 
 # History files
