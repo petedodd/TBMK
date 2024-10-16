@@ -342,6 +342,13 @@ str(gtotsw)
 
 fwrite(gtotsw,file=gh('{xd}Table1a.csv'))
 
+## survivor stat
+surv <- gtota[txstatus=='tot' & qty !='morb']
+surv <- dcast(surv,.~qty,value.var=c('mid','s'))
+surv[,mid_surv:=mid_inc-mid_mort]
+surv[,s_surv:=sqrt(s_inc^2+s_mort^2)]
+surv[,surv_text:=brkt(mid_surv,s_surv)]
+fwrite(surv,file=gh('{xd}surv.csv'))
 
 ## regional
 rtots <- tmp[,.(mid=sum(mean),s=ssum(sd)),by=.(acat,qty,txstatus,g.whoregion)]
