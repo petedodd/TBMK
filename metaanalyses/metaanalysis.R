@@ -565,7 +565,10 @@ CFR[,qty:=NULL]
 CFR$acat <- factor(CFR$acat,levels=acts,ordered = TRUE)
 
 save(CFR,file=gh('{td}CFR.Rdata'))
+save(CFR,file=gh('{xd}CFR.Rdata'))
 
+
+fwrite(CFR[,.(acat,hiv,I2)],file=gh('{xd}CFR_het.csv'))
 
 CFR[,c('TBM','TBMdeaths'):=1.0]
 CFR[,hiv2:=hiv]
