@@ -554,6 +554,19 @@ names(noagetab)[names(noagetab)=='variable'] <- 'HIV'
 ## save:
 fwrite(noagetab,file=gh('{xd}noagetab.csv'))
 
+## extra: HIV AFR
+noageAFR <- htmp[Region=='Africa',.(
+                 `HIV-infected`=sum(`HIV-infected`),
+                 his=ssum(his)
+                 ),by=.(Region,QTY)]
+
+noageAFR[,c('LO','HI'):=.(`HIV-infected`-1.96*his,`HIV-infected`+1.96*his)]
+noageAFR[,his:=NULL]
+
+## save:
+fwrite(noageAFR,file=gh('{xd}noageAFR_HIV.csv'))
+
+
 ## make the age but no region table
 noreg <- htmp[Region != 'GLOBAL',
               .(Total=sum(Total),
